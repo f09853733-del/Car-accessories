@@ -313,7 +313,11 @@ function renderCart() {
     row.className = "cart-item";
 
     row.innerHTML = `
-      <div class="cart-item-icon">${item.icon}</div>
+     <div class="cart-item-icon">
+  ${item.image
+    ? `<img src="${item.image}" alt="${item.name}" class="cart-product-image" onerror="this.style.display='none'">`
+    : item.icon}
+</div>
       <div class="cart-item-info">
         <h4></h4>
         <p>${formatPrice(item.price)}</p>
