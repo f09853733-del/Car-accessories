@@ -19,7 +19,7 @@ const products = [
     rating: 4.8,
     tag: "محبوب",
     icon: "🛢️",
-    image: "https://images.unsplash.com/photo-1635784063387-6e4e8f6c3b18?auto=format&fit=crop&w=700&q=80",
+    image: "images/premium-engine-oil.jpg",
     description: "مناسب برای سرویس و نگهداری خودرو"
   },
   {
@@ -30,7 +30,7 @@ const products = [
     rating: 4.7,
     tag: "ویژه",
     icon: "📹",
-    image: "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=700&q=80",
+    image: "images/dash-camera.jpg",
     description: "تجهیزات کاربردی برای رانندگی مطمئن‌تر"
   },
   {
@@ -41,7 +41,7 @@ const products = [
     rating: 4.8,
     tag: "پیشنهادی",
     icon: "💡",
-    image: "https://images.unsplash.com/photo-1485291571150-772bcfc10da5?auto=format&fit=crop&w=700&q=80",
+    image: "images/led-car-lights.jpg",
     description: "روشنایی مدرن برای خودروی شما"
   },
   {
@@ -52,7 +52,7 @@ const products = [
     rating: 4.6,
     tag: "جدید",
     icon: "🚘",
-    image: "https://images.unsplash.com/photo-1489824904134-891ab64532f1?auto=format&fit=crop&w=700&q=80",
+    image: "images/car-floor-mats.jpg",
     description: "لوازم کاربردی برای فضای داخلی خودرو"
   },
   {
@@ -63,7 +63,7 @@ const products = [
     rating: 4.7,
     tag: "کاربردی",
     icon: "🔧",
-    image: "https://images.unsplash.com/photo-1581147036324-c1c89c2c8a7a?auto=format&fit=crop&w=700&q=80",
+    image: "images/car-tool-kit.jpg",
     description: "ابزار مناسب برای نگهداری و تعمیرات"
   },
   {
@@ -74,7 +74,7 @@ const products = [
     rating: 4.5,
     tag: "محبوب",
     icon: "🔌",
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=700&q=80",
+    image: "images/car-charger.jpg",
     description: "وسیله‌ای کاربردی برای سفرهای روزانه"
   },
   {
@@ -85,7 +85,7 @@ const products = [
     rating: 4.8,
     tag: "ضروری",
     icon: "🧰",
-    image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=700&q=80",
+    image: "images/car-safety-kit.jpg",
     description: "تجهیزات کاربردی برای آمادگی در سفر"
   }
 ];
