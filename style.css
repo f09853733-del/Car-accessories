@@ -105,7 +105,14 @@ button:focus-visible, a:focus-visible, input:focus-visible {
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  background: #171a20;
+  background:
+  linear-gradient(
+    90deg,
+    rgba(10, 12, 16, 0.88) 0%,
+    rgba(10, 12, 16, 0.65) 48%,
+    rgba(10, 12, 16, 0.20) 100%
+  ),
+  url("images/sport.jpg") center center / cover no-repeat;
 }
 .hero-bg {
   position: absolute; inset: 0; z-index: -2;
