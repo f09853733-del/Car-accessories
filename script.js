@@ -7,7 +7,7 @@ const products = [
     price: 8500000,
     rating: 4.9,
     tag: "پرفروش",
-    icon: "",
+    icon: "🛞",
     image: "images/sport-rim.jpg",
     description: "طراحی اسپرت و ظاهری متفاوت برای خودروی شما"
   },
