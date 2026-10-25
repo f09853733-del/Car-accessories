@@ -342,3 +342,14 @@ button:focus-visible, a:focus-visible, input:focus-visible {
   border-radius: 10px;
   display: block;
 }
+
+/* تیترهای حرفه‌ای فروشگاه */
+h1,
+h2,
+h3,
+.hero h1,
+.section-heading h2,
+.promo h2 {
+  font-family: "Estedad", "Vazirmatn", Tahoma, sans-serif;
+}
+
