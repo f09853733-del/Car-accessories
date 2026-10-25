@@ -1,4 +1,10 @@
-
+@font-face {
+  font-family: "Vazirmatn";
+  src: url("images/Vazirmatn%5Bwght%5D.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
 :root {
   --bg: #101216;
   --surface: #191c22;
