@@ -7,7 +7,8 @@ const products = [
     price: 8500000,
     rating: 4.9,
     tag: "پرفروش",
-    image: "images/sport-rim.jpg"/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=700&q=80",
+    icon: "🛞",
+    image: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=700&q=80",
     description: "طراحی اسپرت و ظاهری متفاوت برای خودروی شما"
   },
   {
@@ -376,3 +377,4 @@ document.getElementById("newsletterForm").addEventListener("submit", event => {
 // اجرای اولیه
 renderProducts();
 renderCart();
+ataaaaaaaaaaaaaaaa
