@@ -399,4 +399,14 @@ ataaaaaaaaaaaaaaaa
 
   window.setTimeout(closeIntro, 3000);
 })();
+// AUTO LUXE Intro Screen
+document.addEventListener("DOMContentLoaded", function () {
+  const introScreen = document.getElementById("introScreen");
+
+  if (introScreen) {
+    setTimeout(function () {
+      introScreen.classList.add("intro-hidden");
+    }, 3000);
+  }
+});
 
