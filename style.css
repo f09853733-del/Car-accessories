@@ -573,5 +573,14 @@ h3,
     transition: none !important;
   }
 }
+.intro-screen {
+  transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+.intro-screen.intro-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
 
 
