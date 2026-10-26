@@ -381,7 +381,7 @@ document.getElementById("newsletterForm").addEventListener("submit", event => {
 // اجرای اولیه
 renderProducts();
 renderCart();
-ataaaaaaaaaaaaaaaa
+
 
 /* AUTO LUXE intro: auto-enter after 3 seconds */
 (() => {
