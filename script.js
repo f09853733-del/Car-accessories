@@ -259,16 +259,7 @@ function renderProducts() {
   function setCategory(category) {
   activeCategory = category;
 
-  document.querySelectorAll(".filter-btn").forEach(button => {
-    button.classList.toggle(
-      "active",
-      button.dataset.filter === category
-    );
-  });
-
-  renderProducts();
-}
-
+ 
 document.querySelectorAll(".filter-btn").forEach(button => {
   button.addEventListener("click", () => {
     setCategory(button.dataset.filter);
