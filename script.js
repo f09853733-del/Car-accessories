@@ -255,17 +255,27 @@ function renderProducts() {
     productGrid.appendChild(card);
   });
 }
-
-  function setCategory(category) {
+function setCategory(category) {
   activeCategory = category;
 
- 
+  document.querySelectorAll(".filter-btn").forEach(button => {
+    button.classList.toggle(
+      "active",
+      button.dataset.filter === category
+    );
+  });
+
+  renderProducts();
+}
+
+// دکمه‌های فیلتر محصولات
 document.querySelectorAll(".filter-btn").forEach(button => {
   button.addEventListener("click", () => {
     setCategory(button.dataset.filter);
   });
 });
 
+// دسته‌بندی‌های صفحه
 document.querySelectorAll(".category-card").forEach(button => {
   button.addEventListener("click", () => {
     const category = button.dataset.category;
@@ -276,7 +286,7 @@ document.querySelectorAll(".category-card").forEach(button => {
     });
   });
 });
-
+  
 // جست‌وجوی محصولات
 const searchPanel = document.getElementById("searchPanel");
 const searchInput = document.getElementById("searchInput");
