@@ -11,6 +11,7 @@ window.addEventListener("load", function () {
     }, 800);
   }, 3000);
 });
+let currentLanguage = "fa";
 const products = [
   {
     id: 1,
@@ -475,7 +476,7 @@ document.addEventListener("DOMContentLoaded", function () {
 const introScreen = document.getElementById("introScreen");
 
  
-let currentLanguage = "fa";
+
 
 function toggleLanguage() {
   currentLanguage = currentLanguage === "fa" ? "en" : "fa";
