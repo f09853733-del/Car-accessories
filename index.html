@@ -296,5 +296,22 @@
   <div class="toast" id="toast" role="status"></div>
 
   <script src="script.js"></script>
+  
+<script>
+  window.setTimeout(function () {
+    var intro = document.getElementById("introScreen");
+
+    if (intro) {
+      intro.classList.add("intro-hidden");
+
+      window.setTimeout(function () {
+        if (intro.parentNode) {
+          intro.parentNode.removeChild(intro);
+        }
+      }, 800);
+    }
+  }, 3000);
+</script>
+
 </body>
 </html>
