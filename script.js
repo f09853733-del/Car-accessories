@@ -471,10 +471,7 @@ document.addEventListener("DOMContentLoaded", function () {
  
 const introScreen = document.getElementById("introScreen");
 
-  setTimeout(function () {
-  introScreen.classList.add("intro-hidden");
-}, 2000);
-
+ 
 let currentLanguage = "fa";
 
 function toggleLanguage() {
