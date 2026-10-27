@@ -410,3 +410,26 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+let currentLanguage = "fa";
+
+function toggleLanguage() {
+  currentLanguage = currentLanguage === "fa" ? "en" : "fa";
+
+  document.documentElement.lang = currentLanguage;
+  document.documentElement.dir =
+    currentLanguage === "fa" ? "rtl" : "ltr";
+
+  document.querySelectorAll("[data-fa][data-en]").forEach((element) => {
+    element.textContent = element.getAttribute(
+      currentLanguage === "fa" ? "data-fa" : "data-en"
+    );
+  });
+
+  const button = document.getElementById("languageToggle");
+
+  if (button) {
+    button.textContent = currentLanguage === "fa" ? "EN" : "FA";
+  }
+}
+
+
