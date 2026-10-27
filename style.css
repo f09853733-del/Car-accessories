@@ -583,4 +583,32 @@ h3,
   pointer-events: none;
 }
 
+.language-btn {
+  min-width: 42px;
+  height: 42px;
+  padding: 0 10px;
+  border: 1px solid rgba(230, 189, 114, 0.45);
+  border-radius: 12px;
+  background: #20242c;
+  color: #e6bd72;
+  font-weight: 800;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.language-btn:hover {
+  background: #ef343d;
+  color: #fff;
+  border-color: #ef343d;
+  transform: translateY(-2px);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
 
