@@ -468,13 +468,11 @@ renderCart();
 })();
 // AUTO LUXE Intro Screen
 document.addEventListener("DOMContentLoaded", function () {
-  const introScreen = document.getElementById("introScreen");
+ 
+const introScreen = document.getElementById("introScreen");
 
-  if (introScreen) {
-    setTimeout(function () {
-      introScreen.classList.add("intro-hidden");
-    }, 2000);
-  }
+  console.log("تایمر صفحه شروع اجرا شد");
+introScreen.classList.add("intro-hidden");
 });
 
 let currentLanguage = "fa";
