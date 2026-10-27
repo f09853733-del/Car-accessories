@@ -420,9 +420,9 @@ function toggleLanguage() {
     currentLanguage === "fa" ? "rtl" : "ltr";
 
   document.querySelectorAll("[data-fa][data-en]").forEach((element) => {
-    element.textContent = element.getAttribute(
-      currentLanguage === "fa" ? "data-fa" : "data-en"
-    );
+   element.innerHTML = element.getAttribute(
+   currentLanguage === "fa" ? "data-fa" : "data-en"
+  );
   });
 
   const button = document.getElementById("languageToggle");
