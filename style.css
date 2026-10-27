@@ -490,7 +490,7 @@ h3,
   height: 100%;
   background: #ff263f;
   box-shadow: 0 0 12px #ff263f;
-  animation: introProgress 3s linear forwards;
+  animation: introProgress 2s linear forwards;
 }
 
 .intro-entering {
