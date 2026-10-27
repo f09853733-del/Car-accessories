@@ -198,21 +198,34 @@
 </section>
 
 
-    <section class="section products-section" id="products">
-      <div class="section-heading">
-        <div><span class="section-kicker">OUR COLLECTION</span>
-          <h2>محصولات <span>منتخب</span></h2></div>
-        <div class="filter-group">
-          <button class="filter-btn active" data-filter="همه">همه</button>
-          <button class="filter-btn" data-filter="لوازم جانبی">جانبی</button>
-          <button class="filter-btn" data-filter="قطعات یدکی">قطعات</button>
-          <button class="filter-btn" data-filter="تجهیزات الکترونیکی">الکترونیکی</button>
-        </div>
-      </div>
+   
+<section class="section products-section" id="products">
+  <div class="section-heading">
+    <div>
+      <span class="section-kicker">OUR COLLECTION</span>
+      <h2>
+        <span data-fa="محصولات" data-en="Our">محصولات</span>
+        <span data-fa="منتخب" data-en="Featured Products">منتخب</span>
+      </h2>
+    </div>
 
-      <div class="product-grid" id="productGrid"></div>
-      <p class="empty-message" id="emptyMessage" hidden>محصولی با این مشخصات پیدا نشد.</p>
-    </section>
+    <div class="filter-group">
+      <button class="filter-btn active" data-filter="همه" data-fa="همه" data-en="All">همه</button>
+      <button class="filter-btn" data-filter="لوازم جانبی" data-fa="جانبی" data-en="Accessories">جانبی</button>
+      <button class="filter-btn" data-filter="قطعات یدکی" data-fa="قطعات" data-en="Parts">قطعات</button>
+      <button class="filter-btn" data-filter="تجهیزات الکترونیکی" data-fa="الکترونیکی" data-en="Electronics">الکترونیکی</button>
+    </div>
+  </div>
+
+  <div class="product-grid" id="productGrid"></div>
+
+  <p class="empty-message" id="emptyMessage" hidden
+     data-fa="محصولی با این مشخصات پیدا نشد."
+     data-en="No products found matching your criteria.">
+    محصولی با این مشخصات پیدا نشد.
+  </p>
+</section>
+
 
     <section class="promo">
       <div class="promo-content">
