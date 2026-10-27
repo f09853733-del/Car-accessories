@@ -171,18 +171,19 @@ function showToast(message) {
   }, 2600);
 }
 
+
 function renderProducts() {
   const filtered = products.filter(product => {
     const matchesCategory =
       activeCategory === "همه" || product.category === activeCategory;
 
-    const text = (
-      product.name + " " +
-      product.category + " " +
-      product.description
-    ).toLocaleLowerCase("fa");
+    const translation = productTranslations[product.id] || {};
+    const searchName = currentLanguage === "en" ? translation.name : product.name;
+    const searchCategory = currentLanguage === "en" ? translation.category : product.category;
+    const searchDescription = currentLanguage === "en" ? translation.description : product.description;
 
-    const matchesSearch = text.includes(searchTerm.toLocaleLowerCase("fa"));
+    const text = (searchName + " " + searchCategory + " " + searchDescription).toLocaleLowerCase();
+    const matchesSearch = text.includes(searchTerm.toLocaleLowerCase());
 
     return matchesCategory && matchesSearch;
   });
@@ -191,11 +192,20 @@ function renderProducts() {
   emptyMessage.hidden = filtered.length !== 0;
 
   filtered.forEach((product, index) => {
-  const translated = productTranslations[product.id] || {};
-  const name = currentLanguage === "en" ? translated.name : product.name;
-  const category = currentLanguage === "en" ? translated.category : product.category;
-  const tag = currentLanguage === "en" ? translated.tag : product.tag;
-  const description = currentLanguage === "en" ? translated.description : product.description;
+    const translated = productTranslations[product.id] || {};
+    const name = currentLanguage === "en" ? translated.name : product.name;
+    const category = currentLanguage === "en" ? translated.category : product.category;
+    const tag = currentLanguage === "en" ? translated.tag : product.tag;
+    const description = currentLanguage === "en" ? translated.description : product.description;
+
+    const ratingText = currentLanguage === "en"
+      ? `${product.rating} out of 5`
+      : `${product.rating} از ۵`;
+
+    const addText = currentLanguage === "en"
+      ? "＋ Add to Cart"
+      : "＋ افزودن به سبد";
+
     const card = document.createElement("article");
     card.className = "product-card";
     card.style.animationDelay = `${index * 60}ms`;
@@ -203,17 +213,17 @@ function renderProducts() {
     card.innerHTML = `
       <div class="product-image">
         <div class="product-placeholder" aria-hidden="true">${product.icon}</div>
-        <img src="${product.image}" alt="${product.name}" loading="lazy">
-        <span class="product-tag">${product.tag}</span>
+        <img src="${product.image}" alt="${name}" loading="lazy">
+        <span class="product-tag">${tag}</span>
       </div>
       <div class="product-info">
-        <span class="product-category">${product.category}</span>
-        <h3>${product.name}</h3>
-        <p class="product-description">${product.description}</p>
-        <div class="product-rating">★ ★ ★ ★ ★ <small>${product.rating} از ۵</small></div>
+        <span class="product-category">${category}</span>
+        <h3>${name}</h3>
+        <p class="product-description">${description}</p>
+        <div class="product-rating">★ ★ ★ ★ ★ <small>${ratingText}</small></div>
         <div class="product-bottom">
           <span class="product-price">${formatPrice(product.price)}</span>
-          <button class="add-cart" data-add="${product.id}">＋ افزودن به سبد</button>
+          <button class="add-cart" data-add="${product.id}">${addText}</button>
         </div>
       </div>
     `;
@@ -234,7 +244,6 @@ function renderProducts() {
   });
 }
 
-function setCategory(category) {
   activeCategory = category;
 
   document.querySelectorAll(".filter-btn").forEach(button => {
@@ -488,6 +497,9 @@ function toggleLanguage() {
   if (button) {
     button.textContent = currentLanguage === "fa" ? "EN" : "FA";
   }
+  if (typeof renderProducts === "function") {
+  renderProducts();
+}
 }
 
 
