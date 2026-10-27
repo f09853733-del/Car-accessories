@@ -90,6 +90,59 @@ const products = [
   }
 ];
 
+const productTranslations = {
+  1: {
+    name: "Sport Car Rims",
+    category: "Accessories",
+    tag: "Bestseller",
+    description: "Sporty design for a distinctive look"
+  },
+  2: {
+    name: "Premium Engine Oil",
+    category: "Oil & Maintenance",
+    tag: "Popular",
+    description: "Ideal for routine vehicle maintenance"
+  },
+  3: {
+    name: "Dash Camera",
+    category: "Electronics",
+    tag: "Featured",
+    description: "Practical equipment for safer driving"
+  },
+  4: {
+    name: "LED Car Lights",
+    category: "Car Lighting",
+    tag: "Recommended",
+    description: "Modern lighting for your vehicle"
+  },
+  5: {
+    name: "Car Floor Mats",
+    category: "Accessories",
+    tag: "New",
+    description: "Practical protection for your car interior"
+  },
+  6: {
+    name: "Car Tool Kit",
+    category: "Spare Parts",
+    tag: "Practical",
+    description: "Useful tools for maintenance and repairs"
+  },
+  7: {
+    name: "Car Charger",
+    category: "Electronics",
+    tag: "Popular",
+    description: "A handy companion for everyday journeys"
+  },
+  8: {
+    name: "Car Safety Kit",
+    category: "Car Safety",
+    tag: "Essential",
+    description: "Essential equipment for safer trips"
+  }
+};
+
+
+
 const productGrid = document.getElementById("productGrid");
 const emptyMessage = document.getElementById("emptyMessage");
 const cartCount = document.getElementById("cartCount");
