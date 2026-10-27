@@ -81,13 +81,18 @@
 </nav>
 
 
-    <div class="header-actions">
-      <button class="icon-btn" id="searchToggle" aria-label="جستجو">⌕</button>
-      <button class="icon-btn cart-trigger" id="cartToggle" aria-label="سبد خرید">
-        🛒 <span class="cart-count" id="cartCount">0</span>
-      </button>
-    </div>
-  </header>
+  
+<div class="header-actions">
+  <button class="icon-btn" id="searchToggle" type="button" aria-label="جستجو">⌕</button>
+
+  <button class="language-btn" id="languageToggle" type="button" onclick="toggleLanguage()">EN</button>
+
+  <button class="icon-btn cart-trigger" id="cartToggle" type="button" aria-label="سبد خرید">
+    🛒 <span class="cart-count" id="cartCount">0</span>
+  </button>
+</div>
+</header>
+
 
   <div class="search-panel" id="searchPanel">
     <input id="searchInput" type="search"
