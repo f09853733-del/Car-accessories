@@ -406,7 +406,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (introScreen) {
     setTimeout(function () {
       introScreen.classList.add("intro-hidden");
-    }, 3000);
+    }, 2000);
   }
 });
 
