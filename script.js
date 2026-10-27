@@ -1,4 +1,16 @@
+window.addEventListener("load", function () {
+  const intro = document.getElementById("introScreen");
 
+  if (!intro) return;
+
+  window.setTimeout(function () {
+    intro.classList.add("intro-hidden");
+
+    window.setTimeout(function () {
+      intro.remove();
+    }, 800);
+  }, 3000);
+});
 const products = [
   {
     id: 1,
@@ -450,19 +462,6 @@ renderProducts();
 renderCart();
 
 
-/* AUTO LUXE intro: auto-enter after 3 seconds */
-(() => {
-  const intro = document.getElementById("introScreen");
-
-  if (!intro) return;
-
-  const closeIntro = () => {
-    intro.classList.add("intro-hidden");
-
-    window.setTimeout(() => {
-      intro.remove();
-    }, 800);
-  };
 
   window.setTimeout(closeIntro, 3000);
 })();
