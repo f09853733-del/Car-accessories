@@ -486,10 +486,11 @@ function toggleLanguage() {
   if (button) {
     button.textContent = currentLanguage === "fa" ? "EN" : "FA";
   }
-  if (typeof renderProducts === "function") {
+ if (typeof renderProducts === "function") {
   renderProducts();
 }
 }
-  window.toggleLanguage = toggleLanguage;
 
+window.toggleLanguage = toggleLanguage;
+});
 
