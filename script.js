@@ -471,9 +471,9 @@ document.addEventListener("DOMContentLoaded", function () {
  
 const introScreen = document.getElementById("introScreen");
 
-  console.log("تایمر صفحه شروع اجرا شد");
-introScreen.classList.add("intro-hidden");
-});
+  setTimeout(function () {
+  introScreen.classList.add("intro-hidden");
+}, 2000);
 
 let currentLanguage = "fa";
 
