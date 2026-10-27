@@ -458,8 +458,7 @@ renderCart();
 
 
 
-  window.setTimeout(closeIntro, 3000);
-})();
+  
 // AUTO LUXE Intro Screen
 document.addEventListener("DOMContentLoaded", function () {
  
