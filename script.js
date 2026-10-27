@@ -472,7 +472,7 @@ const introScreen = document.getElementById("introScreen");
 
  
 let currentLanguage = "fa";
-window.toggleLanguage = toggleLanguage;
+
 function toggleLanguage() {
   currentLanguage = currentLanguage === "fa" ? "en" : "fa";
 
@@ -495,5 +495,6 @@ function toggleLanguage() {
   renderProducts();
 }
 }
+  window.toggleLanguage = toggleLanguage;
 
 
