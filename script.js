@@ -191,6 +191,11 @@ function renderProducts() {
   emptyMessage.hidden = filtered.length !== 0;
 
   filtered.forEach((product, index) => {
+  const translated = productTranslations[product.id] || {};
+  const name = currentLanguage === "en" ? translated.name : product.name;
+  const category = currentLanguage === "en" ? translated.category : product.category;
+  const tag = currentLanguage === "en" ? translated.tag : product.tag;
+  const description = currentLanguage === "en" ? translated.description : product.description;
     const card = document.createElement("article");
     card.className = "product-card";
     card.style.animationDelay = `${index * 60}ms`;
