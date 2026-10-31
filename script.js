@@ -235,7 +235,9 @@ function renderProducts() {
         <p class="product-description">${description}</p>
         <div class="product-rating">★ ★ ★ ★ ★ <small>${ratingText}</small></div>
         <div class="product-bottom">
-          <span class="product-price">${formatPrice(product.price)}</span>
+         <span class="product-price">
+  ${formatPrice(product.price)} ${currentLanguage === "en" ? "Toman" : "تومان"}
+</span>
           <button class="add-cart" data-add="${product.id}">${addText}</button>
         </div>
       </div>
