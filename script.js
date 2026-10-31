@@ -262,7 +262,7 @@ function renderProducts() {
 }
 function setCategory(category) {
   activeCategory = category;
-
+console.log("Topbar found:", document.querySelectorAll(".topbar [data-fa][data-en]").length);
   document.querySelectorAll(".filter-btn").forEach(button => {
     button.classList.toggle(
       "active",
