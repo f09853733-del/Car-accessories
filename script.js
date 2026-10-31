@@ -490,6 +490,7 @@ function toggleLanguage() {
     currentLanguage === "fa" ? "rtl" : "ltr";
 
   document.querySelectorAll("[data-fa][data-en]").forEach((element) => {
+    console.log(element.className, currentLanguage, element.getAttribute("data-en"));
    element.innerHTML = element.getAttribute(
    currentLanguage === "fa" ? "data-fa" : "data-en"
   );
