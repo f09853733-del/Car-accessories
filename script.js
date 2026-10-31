@@ -508,9 +508,4 @@ function toggleLanguage() {
 
 window.toggleLanguage = toggleLanguage;
 });
-  document.querySelectorAll(".topbar span").forEach((element) => {
-    element.textContent = element.getAttribute(
-      currentLanguage === "fa" ? "data-fa" : "data-en"
-    );
-  });
-
+ 
