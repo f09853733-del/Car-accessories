@@ -198,7 +198,12 @@ button:focus-visible, a:focus-visible, input:focus-visible {
   animation: rise .5s both;
 }
 .product-card:hover { transform: translateY(-6px); border-color: rgba(230,189,114,.5); box-shadow: 0 15px 35px #0003; }
-.product-image { position: relative; height: 210px; background: #292d34; overflow: hidden; }
+.product-image {
+  position: relative;
+  height: 210px;
+  background: transparent;
+  overflow: hidden;
+}
 .product-image img { width: 100%; height: 100%; object-fit: contain; display: block; transition: transform .5s; }
 .product-card:hover .product-image img { transform: scale(1.06); }
 .product-placeholder { width: 100%; height: 100%; display: grid; place-items: center; font-size: 65px; background: radial-gradient(circle,#353a44,#1d2026); }
