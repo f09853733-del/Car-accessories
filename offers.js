@@ -1,4 +1,4 @@
-let currentLanguage = "fa";
+
 
 const offers = [
   {
