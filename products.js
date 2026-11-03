@@ -128,9 +128,12 @@ function renderProducts(list) {
             ${formatPrice(product.price)}
           </span>
 
-          <button class="shop-add-cart" type="button">
-            مشاهده محصول
-          </button>
+  <button
+  class="shop-add-cart"
+  type="button"
+  onclick="window.location.href='product-details.html?id=${product.id}'">
+  مشاهده محصول
+</button>
         </div>
       </div>
     `;
