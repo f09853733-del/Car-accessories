@@ -1,0 +1,289 @@
+.offers-page {
+  min-height: 100vh;
+  background: #101116;
+  color: #fff;
+  padding: 25px 7%;
+  font-family: inherit;
+}
+
+.offers-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0 35px;
+}
+
+.offers-logo {
+  font-size: 27px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.offers-logo span {
+  color: #e63946;
+}
+
+.back-home {
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid #e63946;
+  padding: 10px 18px;
+  border-radius: 8px;
+  transition: .3s;
+}
+
+.back-home:hover {
+  background: #e63946;
+}
+
+.offers-hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 390px;
+  border-radius: 22px;
+  padding: 55px;
+  background:
+    linear-gradient(90deg, rgba(10,10,12,.96), rgba(10,10,12,.55)),
+    radial-gradient(circle at 80% 50%, #8d1724, #17171c 65%);
+  border: 1px solid #373039;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 25px;
+}
+
+.offers-hero::after {
+  content: "AUTO";
+  position: absolute;
+  left: 20px;
+  bottom: -55px;
+  font-size: 180px;
+  font-weight: 900;
+  color: rgba(255,255,255,.035);
+  pointer-events: none;
+}
+
+.offer-badge {
+  width: fit-content;
+  background: #d92839;
+  padding: 11px 22px;
+  border-radius: 30px;
+  font-weight: bold;
+  box-shadow: 0 5px 25px #d9283955;
+}
+
+.offers-label {
+  color: #ff6976;
+  font-size: 14px;
+}
+
+.offers-content h1 {
+  font-size: clamp(35px, 5vw, 65px);
+  margin: 12px 0;
+  font-weight: 900;
+}
+
+.offers-content h1 span {
+  color: #e63946;
+}
+
+.offers-content p {
+  color: #c3c3ca;
+  line-height: 2;
+}
+
+.countdown-box {
+  position: relative;
+  z-index: 1;
+  max-width: 480px;
+}
+
+.countdown-box h3 {
+  font-size: 15px;
+  margin-bottom: 14px;
+}
+
+#countdown {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+#countdown div {
+  background: #202127;
+  border: 1px solid #49404a;
+  border-radius: 12px;
+  min-width: 75px;
+  padding: 12px;
+  text-align: center;
+}
+
+#countdown strong {
+  display: block;
+  color: #ff4b5b;
+  font-size: 25px;
+}
+
+#countdown span {
+  color: #c4c4cb;
+  font-size: 12px;
+}
+
+.offers-products {
+  padding: 65px 0 45px;
+}
+
+.offers-section-title {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.offers-section-title h2 {
+  font-size: 30px;
+}
+
+.offers-section-title h2 span {
+  color: #e63946;
+}
+
+.offers-section-title p {
+  color: #999ba5;
+}
+
+.offers-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.offer-card {
+  background: #1c1e25;
+  border: 1px solid #343640;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: .3s;
+}
+
+.offer-card:hover {
+  transform: translateY(-8px);
+  border-color: #e63946;
+  box-shadow: 0 12px 30px #0008;
+}
+
+.offer-image {
+  height: 190px;
+  background: #272a33;
+  position: relative;
+}
+
+.offer-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.offer-discount {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #df293b;
+  color: #fff;
+  padding: 7px 12px;
+  border-radius: 7px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.offer-info {
+  padding: 17px;
+}
+
+.offer-info h3 {
+  font-size: 16px;
+  margin: 0 0 15px;
+}
+
+.offer-prices {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.old-price {
+  color: #85858e;
+  text-decoration: line-through;
+  font-size: 13px;
+}
+
+.new-price {
+  color: #ff5362;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.offer-button {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background: #c92738;
+  padding: 11px;
+  border-radius: 8px;
+  margin-top: 18px;
+  transition: .3s;
+}
+
+.offer-button:hover {
+  background: #f03c4e;
+}
+
+.offers-footer {
+  text-align: center;
+  color: #85858e;
+  border-top: 1px solid #303139;
+  padding: 25px 0;
+  font-size: 13px;
+}
+
+@media (max-width: 900px) {
+  .offers-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 550px) {
+  .offers-page {
+    padding: 15px 4%;
+  }
+
+  .offers-header {
+    gap: 10px;
+  }
+
+  .offers-logo {
+    font-size: 21px;
+  }
+
+  .offers-hero {
+    padding: 28px 20px;
+    min-height: 360px;
+  }
+
+  .offers-content h1 {
+    font-size: 38px;
+  }
+
+  .offers-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #countdown {
+    gap: 7px;
+  }
+
+  #countdown div {
+    min-width: 62px;
+    padding: 9px;
+  }
+}
