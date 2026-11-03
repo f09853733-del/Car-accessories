@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>نظرات مشتریان | AUTO LUXE</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #101116;
+      color: #fff;
+      font-family: inherit;
+    }
+
+    .reviews-page {
+      min-height: 100vh;
+      padding: 25px 6%;
+    }
+
+    .reviews-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 0 25px;
+      border-bottom: 1px solid #333;
+    }
+
+    .reviews-logo {
+      font-size: 27px;
+      font-weight: 900;
+      font-style: italic;
+    }
+
+    .reviews-logo span {
+      color: #ed2638;
+    }
+
+    .back-home {
+      text-decoration: none;
+      color: white;
+      border: 1px solid #e63946;
+      padding: 10px 18px;
+      border-radius: 8px;
+    }
+
+    .reviews-hero {
+      text-align: center;
+      padding: 65px 10px 45px;
+      background:
+        radial-gradient(ellipse at center, #43151d 0%, #101116 70%);
+    }
+
+    .reviews-hero h1 {
+      font-size: clamp(30px, 5vw, 48px);
+      margin: 0 0 15px;
+    }
+
+    .reviews-hero h1 span {
+      color: #ed2638;
+    }
+
+    .reviews-hero p {
+      color: #aaa;
+      line-height: 2;
+    }
+
+    .reviews-summary {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      background: #17191f;
+      border: 1px solid #e63946;
+      border-radius: 18px;
+      padding: 28px 15px;
+      margin-bottom: 40px;
+      text-align: center;
+      gap: 15px;
+    }
+
+    .summary-item {
+      border-left: 1px solid #444;
+    }
+
+    .summary-item:last-child {
+      border-left: none;
+    }
+
+    .summary-item strong {
+      display: block;
+      font-size: 35px;
+      color: #ed2638;
+    }
+
+    .summary-item span {
+      color: #aaa;
+      font-size: 14px;
+    }
+
+    .summary-stars {
+      color: #ffb900;
+      font-size: 27px;
+      letter-spacing: 3px;
+      margin-bottom: 7px;
+    }
+
+    .section-title {
+      font-size: 25px;
+      margin: 45px 0 25px;
+    }
+
+    .section-title span {
+      color: #ed2638;
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .review-card {
+      background: #1b1d24;
+      border: 1px solid #343640;
+      border-radius: 16px;
+      padding: 23px;
+      transition: .3s;
+    }
+
+    .review-card:hover {
+      transform: translateY(-6px);
+      border-color: #e63946;
+      box-shadow: 0 8px 25px #e6394620;
+    }
+
+    .review-top {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .review-avatar {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: #8e1725;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .review-name {
+      font-weight: bold;
+    }
+
+    .review-date {
+      display: block;
+      color: #888;
+      font-size: 12px;
+      margin-top: 5px;
+    }
+
+    .review-stars {
+      color: #ffb900;
+      font-size: 20px;
+      margin-bottom: 12px;
+      direction: ltr;
+      text-align: right;
+    }
+
+    .review-text {
+      color: #c5c5c5;
+      line-height: 2;
+      font-size: 14px;
+    }
+
+    .demo-label {
+      display: inline-block;
+      color: #ffb900;
+      font-size: 11px;
+      margin-top: 12px;
+      border: 1px solid #705b22;
+      border-radius: 20px;
+      padding: 4px 9px;
+    }
+
+    .review-form-section {
+      margin-top: 65px;
+      padding: 35px;
+      border: 1px solid #e63946;
+      border-radius: 18px;
+      background:
+        radial-gradient(ellipse at left, #45151d, #17191f 60%);
+    }
+
+    .review-form-section h2 {
+      margin-top: 0;
+      font-size: 25px;
+    }
+
+    .review-form-section p {
+      color: #aaa;
+      line-height: 2;
+    }
+
+    .rating-select {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 25px 0;
+    }
+
+    .rating-select span {
+      color: #ccc;
+    }
+
+    .rating-select button {
+      background: none;
+      border: none;
+      color: #666;
+      font-size: 32px;
+      cursor: pointer;
+      padding: 0;
+    }
+
+    .rating-select button.active {
+      color: #ffb900;
+    }
+
+    .review-fields {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+
+    .review-fields input,
+    .review-fields textarea {
+      width: 100%;
+      background: #101116;
+      border: 1px solid #41434c;
+      border-radius: 9px;
+      padding: 15px;
+      color: white;
+      font-family: inherit;
+      outline: none;
+      font-size: 14px;
+    }
+
+    .review-fields input:focus,
+    .review-fields textarea:focus {
+      border-color: #e63946;
+    }
+
+    .review-fields textarea {
+      grid-column: 1 / -1;
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    .submit-review {
+      display: block;
+      width: min(100%, 350px);
+      margin: 22px auto 0;
+      padding: 15px;
+      background: #e00020;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      font-family: inherit;
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+      transition: .3s;
+    }
+
+    .submit-review:hover {
+      background: #ad0019;
+      transform: translateY(-3px);
+    }
+
+    .reviews-footer {
+      text-align: center;
+      color: #777;
+      border-top: 1px solid #333;
+      margin-top: 60px;
+      padding: 25px 0;
+    }
+
+    @media (max-width: 850px) {
+      .reviews-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .reviews-page {
+        padding: 15px 5%;
+      }
+
+      .reviews-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .reviews-summary {
+        grid-template-columns: 1fr;
+      }
+
+      .summary-item {
+        border-left: none;
+        border-bottom: 1px solid #444;
+        padding-bottom: 15px;
+      }
+
+      .summary-item:last-child {
+        border-bottom: none;
+      }
+
+      .review-fields {
+        grid-template-columns: 1fr;
+      }
+
+      .review-form-section {
+        padding: 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<main class="reviews-page">
+
+  <header class="reviews-header">
+    <div class="reviews-logo">AUTO <span>LUXE</span></div>
+    <a href="index.html" class="back-home">بازگشت به صفحه اصلی</a>
+  </header>
+
+  <section class="reviews-hero">
+    <h1>نظرات <span>مشتریان</span> ⭐</h1>
+    <p>تجربه خرید مشتریان ما را بخوانید و نظر خودتان را با ما به اشتراک بگذارید.</p>
+  </section>
+
+  <section class="reviews-summary">
+    <div class="summary-item">
+      <strong>۴.۸</strong>
+      <span>میانگین امتیاز نمونه</span>
+    </div>
+
+    <div class="summary-item">
+      <div class="summary-stars">★★★★★</div>
+      <span>امتیاز ستاره‌ای نمونه</span>
+    </div>
+
+    <div class="summary-item">
+      <strong>★</strong>
+      <span>رضایت مشتریان</span>
+    </div>
+  </section>
+
+  <h2 class="section-title">تجربه <span>مشتریان</span></h2>
+
+  <section class="reviews-grid" id="reviewsGrid">
+
+    <article class="review-card">
+      <div class="review-top">
+        <div class="review-avatar">م</div>
+        <div>
+          <div class="review-name">مشتری نمونه اول</div>
+          <span class="review-date">نمونه نمایشی</span>
+        </div>
+      </div>
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">متن نمونه برای نمایش ظاهر کارت نظر مشتری. این متن را بعداً با نظر واقعی جایگزین می‌کنیم.</p>
+      <span class="demo-label">نظر نمایشی</span>
+    </article>
+
+    <article class="review-card">
+      <div class="review-top">
+        <div class="review-avatar">س</div>
+        <div>
+          <div class="review-name">مشتری نمونه دوم</div>
+          <span class="review-date">نمونه نمایشی</span>
+        </div>
+      </div>
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">اینجا تجربه خرید واقعی مشتری درباره کیفیت محصول و خدمات فروشگاه نمایش داده می‌شود.</p>
+      <span class="demo-label">نظر نمایشی</span>
+    </article>
+
+    <article class="review-card">
+      <div class="review-top">
+        <div class="review-avatar">ع</div>
+        <div>
+          <div class="review-name">مشتری نمونه سوم</div>
+          <span class="review-date">نمونه نمایشی</span>
+        </div>
+      </div>
+      <div class="review-stars">★★★★☆</div>
+      <p class="review-text">این کارت برای نمایش چیدمان نظرات و امتیاز مشتریان در صفحه قرار گرفته است.</p>
+      <span class="demo-label">نظر نمایشی</span>
+    </article>
+
+  </section>
+
+  <section class="review-form-section">
+    <h2>نظر خود را با ما به اشتراک بگذارید 💬</h2>
+    <p>تجربه خریدتان برای ما ارزشمند است. نظر خود را ثبت کنید.</p>
+
+    <form id="reviewForm">
+
+      <div class="rating-select">
+        <span>امتیاز شما:</span>
+        <button type="button" data-rating="1">★</button>
+        <button type="button" data-rating="2">★</button>
+        <button type="button" data-rating="3">★</button>
+        <button type="button" data-rating="4">★</button>
+        <button type="button" data-rating="5">★</button>
+      </div>
+
+      <div class="review-fields">
+        <input type="text" id="reviewName" placeholder="نام شما" required>
+        <input type="email" id="reviewEmail" placeholder="ایمیل شما (اختیاری)">
+        <textarea id="reviewMessage" placeholder="نظر خود را بنویسید..." required></textarea>
+      </div>
+
+      <button type="submit" class="submit-review">ثبت نظر</button>
+
+    </form>
+  </section>
+
+  <footer class="reviews-footer">
+    © 2026 AUTO LUXE - تمامی حقوق محفوظ است.
+  </footer>
+
+</main>
+
+<script>
+  let selectedRating = 0;
+
+  const ratingButtons = document.querySelectorAll(".rating-select button");
+
+  ratingButtons.forEach(button => {
+    button.addEventListener("click", function () {
+      selectedRating = Number(this.dataset.rating);
+
+      ratingButtons.forEach(item => {
+        item.classList.toggle(
+          "active",
+          Number(item.dataset.rating) <= selectedRating
+        );
+      });
+    });
+  });
+
+  const reviewsGrid = document.getElementById("reviewsGrid");
+
+  function loadReviews() {
+    const savedReviews = JSON.parse(
+      localStorage.getItem("autoLuxeReviews") || "[]"
+    );
+
+    savedReviews.forEach(review => {
+      addReviewToPage(review, false);
+    });
+  }
+
+  function addReviewToPage(review, isNew) {
+    const card = document.createElement("article");
+    card.className = "review-card";
+
+    const top = document.createElement("div");
+    top.className = "review-top";
+
+    const avatar = document.createElement("div");
+    avatar.className = "review-avatar";
+    avatar.textContent = review.name.charAt(0);
+
+    const info = document.createElement("div");
+
+    const name = document.createElement("div");
+    name.className = "review-name";
+    name.textContent = review.name;
+
+    const date = document.createElement("span");
+    date.className = "review-date";
+    date.textContent = "نظر ثبت‌شده";
+
+    info.append(name, date);
+    top.append(avatar, info);
+
+    const stars = document.createElement("div");
+    stars.className = "review-stars";
+    stars.textContent =
+      "★".repeat(review.rating) + "☆".repeat(5 - review.rating);
+
+    const message = document.createElement("p");
+    message.className = "review-text";
+    message.textContent = review.message;
+
+    card.append(top, stars, message);
+
+    if (isNew) {
+      const label = document.createElement("span");
+      label.className = "demo-label";
+      label.textContent = "ذخیره‌شده در این مرورگر";
+      card.append(label);
+    }
+
+    reviewsGrid.prepend(card);
+  }
+
+  document.getElementById("reviewForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    if (selectedRating === 0) {
+      alert("لطفاً ابتدا امتیاز خود را انتخاب کنید.");
+      return;
+    }
+
+    const review = {
+      name: document.getElementById("reviewName").value.trim(),
+      rating: selectedRating,
+      message: document.getElementById("reviewMessage").value.trim()
+    };
+
+    if (!review.name || !review.message) {
+      alert("لطفاً نام و متن نظر را وارد کنید.");
+      return;
+    }
+
+    const savedReviews = JSON.parse(
+      localStorage.getItem("autoLuxeReviews") || "[]"
+    );
+
+    savedReviews.push(review);
+    localStorage.setItem("autoLuxeReviews", JSON.stringify(savedReviews));
+
+    addReviewToPage(review, true);
+
+    this.reset();
+    selectedRating = 0;
+    ratingButtons.forEach(button => button.classList.remove("active"));
+
+    alert("نظر شما در این مرورگر ذخیره شد.");
+  });
+
+  loadReviews();
+</script>
+
+</body>
+</html>
