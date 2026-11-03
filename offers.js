@@ -1,3 +1,5 @@
+let currentLanguage = "fa";
+
 const offers = [
   {
     name: "رینگ اسپرت خودرو",
