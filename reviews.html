@@ -123,13 +123,33 @@
       gap: 20px;
     }
 
-    .review-card {
-      background: #1b1d24;
-      border: 1px solid #343640;
-      border-radius: 16px;
-      padding: 23px;
-      transition: .3s;
-    }
+   .review-card {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(145deg, #22242d, #14151b);
+  border: 1px solid #39343d;
+  border-radius: 20px;
+  padding: 28px;
+  transition: all .4s ease;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, .25);
+}
+
+.review-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(#ff3348, transparent);
+  opacity: .7;
+}
+
+.review-card:hover {
+  transform: translateY(-9px);
+  border-color: #ed2638;
+  box-shadow: 0 15px 35px rgba(237, 38, 56, .18);
+}
 
     .review-card:hover {
       transform: translateY(-6px);
