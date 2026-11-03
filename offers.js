@@ -9,7 +9,7 @@ const offers = [
     image: "images/sport-rim.jpg",
     oldPrice: "۱۰,۰۰۰,۰۰۰ تومان",
     newPrice: "۸,۵۰۰,۰۰۰ تومان",
-    discount: "۱۵٪ تخفیف",
+    discountEn: "15% OFF",
     productId: 1
   },
   {
@@ -20,7 +20,7 @@ const offers = [
     image: "images/premium-engine-oil.jpg",
     oldPrice: "۱,۶۰۰,۰۰۰ تومان",
     newPrice: "۱,۲۵۰,۰۰۰ تومان",
-    discount: "۲۲٪ تخفیف",
+   discountEn: "22% OFF",
     productId: 2
   },
   {
@@ -42,7 +42,7 @@ const offers = [
     image: "images/led-car-lights.jpg",
     oldPrice: "۱,۲۰۰,۰۰۰ تومان",
     newPrice: "۹۸۰,۰۰۰ تومان",
-    discount: "۱۸٪ تخفیف",
+    discountEn: "18% OFF",
     productId: 4
   }
 ];
@@ -53,11 +53,13 @@ offersGrid.innerHTML = offers.map(product => `
   <article class="offer-card">
     <div class="offer-image">
       <img src="${product.image}" alt="${product.name[currentLanguage]}">
-      <span class="offer-discount">${product.discount}</span>
+     <span class="offer-discount"
+      data-fa="${product.discount}"
+      data-en="${product.discountEn}">${product.discount}</span>
     </div>
 
     <div class="offer-info">
-    <h3>${product.name[currentLanguage]}</h3>
+   <h3 data-fa="${product.name.fa}" data-en="${product.name.en}">${product.name.fa}</h3>
 
       <div class="offer-prices">
         <span class="old-price">${product.oldPrice}</span>
@@ -66,7 +68,7 @@ offersGrid.innerHTML = offers.map(product => `
 
       <a href="product-details.html?id=${product.productId}"
          class="offer-button">
-        مشاهده محصول
+        <span data-fa="مشاهده محصول" data-en="VIEW PRODUCT">مشاهده محصول</span>
       </a>
     </div>
   </article>
@@ -83,7 +85,7 @@ function updateCountdown() {
 
   if (distance <= 0) {
     document.getElementById("countdown").innerHTML =
-      "تخفیف به پایان رسید";
+     '<span data-fa="تخفیف به پایان رسید" data-en="THE OFFER HAS ENDED">تخفیف به پایان رسید</span>';
     clearInterval(countdownInterval);
     return;
   }
