@@ -202,9 +202,16 @@ button:focus-visible, a:focus-visible, input:focus-visible {
   position: relative;
   height: 210px;
   background: transparent;
-  overflow: hidden;
+  overflow: hidden;.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  transition: transform .5s;
+  transform: scale(1.15);
 }
-.product-image img { width: 100%; height: 100%; object-fit: contain; display: block; transition: transform .5s; }
+}
+
 .product-card:hover .product-image img { transform: scale(1.06); }
 .product-placeholder { width: 100%; height: 100%; display: grid; place-items: center; font-size: 65px; background: radial-gradient(circle,#353a44,#1d2026); }
 .product-tag { position: absolute; top: 12px; right: 12px; padding: 4px 9px; background: var(--red); color: white; border-radius: 6px; font-size: 10px; }
