@@ -182,7 +182,23 @@ button:focus-visible, a:focus-visible, input:focus-visible {
   border: 1px solid var(--border); transition: .3s; min-width: 0;
 }
 .category-card:hover { transform: translateY(-6px); border-color: var(--red); background: #252932; }
-.category-icon { width: 54px; height: 54px; display: grid; place-items: center; background: #292d36; border-radius: 13px; font-size: 27px; margin-bottom: 15px; }
+.category-icon {
+  width: 54px;
+  height: 54px;
+  display: grid;
+  place-items: center;
+  background: #292d36;
+  border-radius: 13px;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+
+.category-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
 .category-card h3 { font-size: 13px; margin-bottom: 8px; }
 .category-card > span { font-size: 10px; color: var(--gold); }
 
