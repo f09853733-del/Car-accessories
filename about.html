@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>درباره ما | AUTO LUXE</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .about-page {
+      min-height: 100vh;
+      background: #111318;
+      color: #fff;
+      padding: 35px 6%;
+    }
+
+    .about-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 25px;
+      border-bottom: 1px solid #292d36;
+    }
+
+    .about-logo {
+      font-size: 27px;
+      font-weight: 900;
+      letter-spacing: 2px;
+    }
+
+    .about-logo span { color: #e63946; }
+
+    .about-back {
+      color: #fff;
+      text-decoration: none;
+      border: 1px solid #e63946;
+      padding: 10px 20px;
+      border-radius: 8px;
+      transition: .3s;
+    }
+
+    .about-back:hover {
+      background: #e63946;
+    }
+
+    .about-hero {
+      text-align: center;
+      padding: 85px 15px 65px;
+      background: radial-gradient(ellipse at top, #382027, #111318 70%);
+    }
+
+    .about-hero h1 {
+      font-size: clamp(32px, 5vw, 52px);
+      margin-bottom: 20px;
+    }
+
+    .about-hero h1 span { color: #e63946; }
+
+    .about-hero p {
+      color: #b8bac2;
+      line-height: 2.2;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .about-content {
+      max-width: 1050px;
+      margin: 35px auto 70px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+    }
+
+    .about-box {
+      background: #1b1f27;
+      border: 1px solid #303540;
+      border-radius: 16px;
+      padding: 30px;
+      transition: .3s;
+    }
+
+    .about-box:hover {
+      transform: translateY(-6px);
+      border-color: #e63946;
+    }
+
+    .about-box .about-icon {
+      font-size: 35px;
+      margin-bottom: 15px;
+    }
+
+    .about-box h2 {
+      font-size: 21px;
+      margin-bottom: 15px;
+    }
+
+    .about-box h2 span { color: #e63946; }
+
+    .about-box p {
+      color: #aaa;
+      line-height: 2.2;
+      font-size: 14px;
+    }
+
+    .about-features {
+      max-width: 1050px;
+      margin: auto;
+      text-align: center;
+      padding-bottom: 65px;
+    }
+
+    .about-features h2 {
+      font-size: 30px;
+      margin-bottom: 30px;
+    }
+
+    .about-features h2 span { color: #e63946; }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .feature-item {
+      background: #1b1f27;
+      border: 1px solid #303540;
+      border-radius: 13px;
+      padding: 25px 15px;
+    }
+
+    .feature-item .about-icon { font-size: 30px; }
+
+    .feature-item h3 {
+      margin: 12px 0;
+      font-size: 16px;
+    }
+
+    .feature-item p {
+      color: #aaa;
+      font-size: 13px;
+      line-height: 1.9;
+    }
+
+    .about-footer {
+      text-align: center;
+      color: #777;
+      padding: 30px 10px 10px;
+      border-top: 1px solid #292d36;
+      font-size: 13px;
+    }
+
+    @media (max-width: 750px) {
+      .about-content { grid-template-columns: 1fr; }
+      .features-grid { grid-template-columns: 1fr; }
+      .about-hero { padding: 55px 10px; }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="about-page">
+
+    <header class="about-header">
+      <div class="about-logo">AUTO <span>LUXE</span></div>
+      <a href="index.html" class="about-back">بازگشت به صفحه اصلی</a>
+    </header>
+
+    <section class="about-hero">
+      <h1>درباره <span>AUTO LUXE</span></h1>
+      <p>
+        ما در AUTO LUXE به دنبال ترکیب کیفیت، زیبایی و تجربه‌ای متفاوت
+        در دنیای لوازم و تجهیزات خودرو هستیم.
+        هدف ما فراهم کردن محصولاتی کاربردی و باکیفیت برای علاقه‌مندان خودرو است.
+      </p>
+    </section>
+
+    <section class="about-content">
+
+      <div class="about-box">
+        <div class="about-icon">🚗</div>
+        <h2>داستان <span>ما</span></h2>
+        <p>
+          AUTO LUXE با علاقه به دنیای خودرو و توجه به جزئیات شکل گرفته است.
+          ما تلاش می‌کنیم مجموعه‌ای از لوازم جانبی و تجهیزات خودرو را
+          در فضایی ساده، جذاب و حرفه‌ای ارائه کنیم.
+        </p>
+      </div>
+
+      <div class="about-box">
+        <div class="about-icon">🎯</div>
+        <h2>هدف <span>ما</span></h2>
+        <p>
+          هدف ما ایجاد تجربه‌ای آسان و لذت‌بخش برای انتخاب محصولات خودرو است؛
+          تجربه‌ای که در آن کیفیت، تنوع و دسترسی آسان در کنار هم قرار بگیرند.
+        </p>
+      </div>
+
+    </section>
+
+    <section class="about-features">
+      <h2>چرا <span>AUTO LUXE؟</span></h2>
+
+      <div class="features-grid">
+
+        <div class="feature-item">
+          <div class="about-icon">⭐</div>
+          <h3>کیفیت محصولات</h3>
+          <p>توجه به کیفیت و کاربردی بودن محصولات.</p>
+        </div>
+
+        <div class="feature-item">
+          <div class="about-icon">🛠️</div>
+          <h3>تنوع تجهیزات</h3>
+          <p>مجموعه‌ای متنوع از لوازم و تجهیزات خودرو.</p>
+        </div>
+
+        <div class="feature-item">
+          <div class="about-icon">❤️</div>
+          <h3>تجربه بهتر</h3>
+          <p>تلاش برای ساخت تجربه‌ای راحت و دلپذیر.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <footer class="about-footer">
+      © 2026 AUTO LUXE - تمامی حقوق محفوظ است.
+    </footer>
+
+  </main>
+</body>
+</html>
