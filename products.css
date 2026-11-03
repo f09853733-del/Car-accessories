@@ -1,0 +1,269 @@
+/* AUTO LUXE PRODUCTS PAGE */
+
+.products-page {
+  min-height: 100vh;
+  background: #111318;
+  color: #fff;
+  padding: 35px 6%;
+  font-family: inherit;
+}
+
+.products-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #292d36;
+}
+
+.products-logo {
+  font-size: 27px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.products-logo span {
+  color: #e63946;
+}
+
+.back-home {
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid #e63946;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: .3s;
+}
+
+.back-home:hover {
+  background: #e63946;
+}
+
+.products-hero {
+  text-align: center;
+  padding: 65px 15px 45px;
+}
+
+.products-hero h1 {
+  font-size: clamp(30px, 5vw, 48px);
+  margin-bottom: 15px;
+}
+
+.products-hero h1 span {
+  color: #e63946;
+}
+
+.products-hero p {
+  color: #a9abb2;
+  line-height: 2;
+}
+
+.products-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-bottom: 30px;
+}
+
+.products-search {
+  width: min(100%, 340px);
+  padding: 13px 16px;
+  border: 1px solid #343944;
+  border-radius: 10px;
+  background: #1d2129;
+  color: #fff;
+  outline: none;
+  font: inherit;
+}
+
+.products-search:focus {
+  border-color: #e63946;
+}
+
+.products-filters {
+  display: flex;
+  gap: 9px;
+  flex-wrap: wrap;
+}
+
+.products-filter {
+  background: #20242d;
+  color: #ccc;
+  border: 1px solid #343944;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font: inherit;
+  transition: .3s;
+}
+
+.products-filter:hover,
+.products-filter.active {
+  background: #e63946;
+  color: #fff;
+  border-color: #e63946;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.shop-card {
+  background: #1b1f27;
+  border: 1px solid #303540;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform .35s, border-color .35s, box-shadow .35s;
+}
+
+.shop-card:hover {
+  transform: translateY(-8px);
+  border-color: #e63946;
+  box-shadow: 0 15px 35px #0007;
+}
+
+.shop-card-image {
+  height: 210px;
+  background: #242934;
+  position: relative;
+  overflow: hidden;
+}
+
+.shop-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  transition: transform .4s;
+}
+
+.shop-card:hover .shop-card-image img {
+  transform: scale(1.06);
+}
+
+.shop-card-tag {
+  position: absolute;
+  top: 13px;
+  right: 13px;
+  background: #e63946;
+  padding: 6px 11px;
+  border-radius: 6px;
+  font-size: 11px;
+}
+
+.shop-card-info {
+  padding: 18px;
+}
+
+.shop-card-category {
+  color: #e63946;
+  font-size: 12px;
+}
+
+.shop-card-info h3 {
+  font-size: 16px;
+  margin: 12px 0;
+}
+
+.shop-card-description {
+  color: #a9abb2;
+  font-size: 12px;
+  line-height: 1.9;
+  min-height: 45px;
+}
+
+.shop-card-rating {
+  color: #ffc857;
+  margin: 13px 0;
+  font-size: 13px;
+}
+
+.shop-card-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+  border-top: 1px solid #303540;
+  padding-top: 15px;
+}
+
+.shop-card-price {
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.shop-add-cart {
+  border: none;
+  background: #e63946;
+  color: white;
+  padding: 10px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font: inherit;
+  font-size: 12px;
+  transition: .3s;
+}
+
+.shop-add-cart:hover {
+  background: #c52230;
+}
+
+.products-empty {
+  display: none;
+  text-align: center;
+  color: #aaa;
+  padding: 45px 10px;
+}
+
+.products-footer {
+  text-align: center;
+  color: #777;
+  padding: 45px 10px 15px;
+  font-size: 13px;
+}
+
+@media (max-width: 1050px) {
+  .products-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 750px) {
+  .products-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 13px;
+  }
+
+  .shop-card-image {
+    height: 160px;
+  }
+
+  .shop-card-info {
+    padding: 12px;
+  }
+
+  .shop-card-info h3 {
+    font-size: 13px;
+  }
+
+  .shop-card-description {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 420px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .shop-card-image {
+    height: 220px;
+  }
+}
