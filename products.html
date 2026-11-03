@@ -5,18 +5,109 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>محصولات | AUTO LUXE</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .products-page {
+      min-height: 100vh;
+      background: #111318;
+      color: #fff;
+      padding: 50px 7%;
+      font-family: inherit;
+    }
+
+    .products-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-bottom: 45px;
+    }
+
+    .products-logo {
+      font-size: 28px;
+      font-weight: 900;
+      letter-spacing: 2px;
+    }
+
+    .products-logo span {
+      color: #e63946;
+    }
+
+    .back-home {
+      color: #fff;
+      text-decoration: none;
+      border: 1px solid #e63946;
+      padding: 10px 22px;
+      border-radius: 8px;
+    }
+
+    .products-title {
+      text-align: center;
+      margin: 65px 0 45px;
+    }
+
+    .products-title h1 {
+      font-size: clamp(28px, 5vw, 45px);
+      margin-bottom: 15px;
+    }
+
+    .products-title h1 span {
+      color: #e63946;
+    }
+
+    .products-title p {
+      color: #aaa;
+      font-size: 15px;
+    }
+
+    .products-coming-soon {
+      max-width: 650px;
+      margin: auto;
+      padding: 55px 25px;
+      text-align: center;
+      background: #1c2028;
+      border: 1px solid #333;
+      border-radius: 18px;
+    }
+
+    .products-coming-soon .icon {
+      font-size: 55px;
+      margin-bottom: 20px;
+    }
+
+    .products-coming-soon h2 {
+      margin-bottom: 12px;
+    }
+
+    .products-coming-soon p {
+      color: #aaa;
+      line-height: 2;
+    }
+  </style>
 </head>
+
 <body>
+  <main class="products-page">
 
-  <header>
-    <h1>AUTO LUXE</h1>
-    <a href="index.html">بازگشت به صفحه اصلی</a>
-  </header>
+    <header class="products-header">
+      <div class="products-logo">AUTO <span>LUXE</span></div>
+      <a class="back-home" href="index.html">بازگشت به صفحه اصلی</a>
+    </header>
 
-  <main>
-    <h2>محصولات فروشگاه</h2>
-    <p>به‌زودی محصولات فروشگاه در این صفحه نمایش داده می‌شوند.</p>
+    <section class="products-title">
+      <h1>فروشگاه <span>محصولات</span></h1>
+      <p>تجهیزات و لوازم تخصصی خودرو را در AUTO LUXE پیدا کنید.</p>
+    </section>
+
+    <section class="products-coming-soon">
+      <div class="icon">🛞</div>
+      <h2>به فروشگاه محصولات خوش آمدید</h2>
+      <p>
+        به‌زودی مجموعه کامل محصولات خودرو با تصاویر،
+        مشخصات و قیمت در این بخش قرار می‌گیرد.
+      </p>
+    </section>
+
   </main>
-
 </body>
 </html>
