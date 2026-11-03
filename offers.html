@@ -12,10 +12,16 @@
   <main class="offers-page">
 
     <header class="offers-header">
-      <div class="offers-logo">AUTO <span>LUXE</span></div>
-      <a href="index.html" class="back-home">بازگشت به صفحه اصلی</a>
-    </header>
+  <div class="offers-logo">AUTO <span>LUXE</span></div>
 
+  <div class="offers-header-actions">
+    <a href="index.html" class="back-home"
+       data-fa="بازگشت به صفحه اصلی"
+       data-en="Back to Home">بازگشت به صفحه اصلی</a>
+
+    <button class="language-btn" id="languageToggle" type="button" onclick="toggleLanguage()">EN</button>
+  </div>
+</header>
     <section class="offers-hero">
       <div class="offer-badge">تا ۵۰٪ تخفیف ویژه</div>
 
@@ -50,6 +56,25 @@
     </footer>
 
   </main>
+  <script>
+let currentLanguage = "fa";
+
+function toggleLanguage() {
+  currentLanguage = currentLanguage === "fa" ? "en" : "fa";
+
+  document.documentElement.lang = currentLanguage;
+  document.documentElement.dir = currentLanguage === "fa" ? "rtl" : "ltr";
+
+  document.querySelectorAll("[data-fa][data-en]").forEach((element) => {
+    element.textContent = element.getAttribute(
+      currentLanguage === "fa" ? "data-fa" : "data-en"
+    );
+  });
+
+  document.getElementById("languageToggle").textContent =
+    currentLanguage === "fa" ? "EN" : "FA";
+}
+</script>
 
   <script src="offers.js"></script>
 </body>
