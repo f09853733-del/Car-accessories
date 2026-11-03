@@ -504,6 +504,14 @@ function toggleLanguage() {
  if (typeof renderProducts === "function") {
   renderProducts();
 }
+  const searchInput = document.getElementById("searchInput");
+
+if (searchInput) {
+  searchInput.placeholder =
+    currentLanguage === "fa"
+      ? searchInput.getAttribute("data-fa-placeholder")
+      : searchInput.getAttribute("data-en-placeholder");
+}
 }
 
 window.toggleLanguage = toggleLanguage;
