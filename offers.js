@@ -2,7 +2,10 @@
 
 const offers = [
   {
-    name: "رینگ اسپرت خودرو",
+    name: {
+    fa: "رینگ اسپرت خودرو",
+    en: "Sport Car Rim"
+    },
     image: "images/sport-rim.jpg",
     oldPrice: "۱۰,۰۰۰,۰۰۰ تومان",
     newPrice: "۸,۵۰۰,۰۰۰ تومان",
@@ -10,7 +13,10 @@ const offers = [
     productId: 1
   },
   {
-    name: "روغن موتور پریمیوم",
+    name: {
+  fa: "روغن موتور پریمیوم",
+  en: "Premium Engine Oil"
+  },
     image: "images/premium-engine-oil.jpg",
     oldPrice: "۱,۶۰۰,۰۰۰ تومان",
     newPrice: "۱,۲۵۰,۰۰۰ تومان",
@@ -18,7 +24,10 @@ const offers = [
     productId: 2
   },
   {
-    name: "دوربین ثبت وقایع",
+ name: {
+  fa: "دوربین ثبت وقایع",
+  en: "Dash Camera"
+  },
     image: "images/dash-camera.jpg",
     oldPrice: "۴,۰۰۰,۰۰۰ تومان",
     newPrice: "۳,۲۰۰,۰۰۰ تومان",
@@ -26,7 +35,10 @@ const offers = [
     productId: 3
   },
   {
-    name: "چراغ LED خودرو",
+    name: {
+  fa: "چراغ LED خودرو",
+  en: "LED Car Lights"
+  },
     image: "images/led-car-lights.jpg",
     oldPrice: "۱,۲۰۰,۰۰۰ تومان",
     newPrice: "۹۸۰,۰۰۰ تومان",
@@ -40,7 +52,7 @@ const offersGrid = document.getElementById("offersGrid");
 offersGrid.innerHTML = offers.map(product => `
   <article class="offer-card">
     <div class="offer-image">
-      <img src="${product.image}" alt="${product.name}">
+      <img src="${product.image}" alt="${product.name[currentLanguage]}">
       <span class="offer-discount">${product.discount}</span>
     </div>
 
