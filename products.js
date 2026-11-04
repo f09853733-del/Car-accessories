@@ -176,10 +176,12 @@ let activeCategory = "all";
 function filterProducts() {
   const searchValue = productSearch.value.trim().toLowerCase();
 
-  const filteredProducts = products.filter(product => {
-    const matchesCategory =
-      activeCategory === "all" ||
-      product.category === activeCategory;
+  
+const filteredProducts = products.filter(product => {
+  
+  const matchesCategory =
+  activeCategory === "all" ||
+  product.category.fa === activeCategory;
 
     const matchesSearch =
       product.name.toLowerCase().includes(searchValue) ||
