@@ -111,9 +111,12 @@ const productSearch = document.getElementById("productSearch");
 const productFilters = document.querySelectorAll(".products-filter");
 
 function formatPrice(price) {
+  if (currentLanguage === "en") {
+    return "$" + (price / 271400).toFixed(2);
+  }
+
   return price.toLocaleString("fa-IR") + " تومان";
 }
-
 function renderProducts(list) {
   productsGrid.innerHTML = "";
 
