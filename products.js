@@ -1,83 +1,107 @@
 const products = [
   {
     id: 1,
-    name: "رینگ اسپرت خودرو",
-    category: "لوازم جانبی",
+    name: { fa: "رینگ اسپرت خودرو", en: "Sport Car Rim" },
+    category: { fa: "لوازم جانبی", en: "Accessories" },
     price: 8500000,
     rating: 4.9,
     tag: "پرفروش",
     image: "images/sport-rim.jpg",
-    description: "طراحی اسپرت و کیفیت ساخت بالا برای خودروی شما."
+description: {
+  fa: "طراحی اسپرت و کیفیت ساخت بالا برای خودروی شما.",
+  en: "Sporty design and high build quality for your vehicle."
+},
   },
   {
     id: 2,
-    name: "روغن موتور پریمیوم",
-    category: "روغن و نگهداری",
+    name: { fa: "روغن موتور پریمیوم", en: "Premium Engine Oil" },
+    category: { fa: "روغن و نگهداری", en: "Oil & Maintenance" },
     price: 1250000,
     rating: 4.8,
     tag: "محبوب",
     image: "images/premium-engine-oil.jpg",
-    description: "محافظت بهتر از موتور و افزایش عملکرد خودرو."
+ description: {
+  fa: "محافظت بهتر از موتور و افزایش عملکرد خودرو.",
+  en: "Better engine protection and improved vehicle performance."
+},
   },
   {
     id: 3,
-    name: "دوربین ثبت وقایع",
-    category: "تجهیزات الکترونیکی",
+    name: { fa: "دوربین ثبت وقایع", en: "Dash Camera" },
+    category: { fa: "تجهیزات الکترونیکی", en: "Electronic Equipment" },
     price: 3200000,
     rating: 4.7,
     tag: "ویژه",
     image: "images/dash-camera.jpg",
-    description: "ثبت تصاویر مسیر با کیفیت بالا و جزئیات دقیق."
+   description: {
+  fa: "ثبت تصاویر مسیر با کیفیت بالا و جزئیات دقیق.",
+  en: "Capture your journeys in high quality with sharp details."
+},
   },
   {
     id: 4,
-    name: "چراغ LED خودرو",
-    category: "روشنایی خودرو",
+ name: { fa: "چراغ LED خودرو", en: "LED Car Lights" },
+category: { fa: "روشنایی خودرو", en: "Car Lighting" },
     price: 980000,
     rating: 4.8,
     tag: "پیشنهادی",
     image: "images/led-car-lights.jpg",
-    description: "نور قدرتمند و روشنایی بهتر در رانندگی شبانه."
+    description: {
+  fa: "نور قدرتمند و روشنایی بهتر در رانندگی شبانه.",
+  en: "Powerful light for better visibility during night driving."
+},
   },
   {
     id: 5,
-    name: "کف‌پوش خودرو",
-    category: "لوازم جانبی",
+    name: { fa: "کف‌پوش خودرو", en: "Car Floor Mats" },
+category: { fa: "لوازم جانبی", en: "Accessories" },
     price: 1450000,
     rating: 4.6,
     tag: "جدید",
     image: "images/car-floor-mats.jpg",
-    description: "محافظت از کف خودرو با طراحی زیبا و کاربردی."
+  description: {
+  fa: "محافظت از کف خودرو با طراحی زیبا و کاربردی.",
+  en: "Protect your car floor with a stylish and practical design."
+},
   },
   {
     id: 6,
-    name: "مجموعه ابزار خودرو",
-    category: "قطعات یدکی",
+   name: { fa: "مجموعه ابزار خودرو", en: "Car Tool Kit" },
+category: { fa: "قطعات یدکی", en: "Spare Parts" },
     price: 2100000,
     rating: 4.7,
     tag: "کاربردی",
     image: "images/car-tool-kit.jpg",
-    description: "مجموعه‌ای کاربردی برای تعمیرات و نگهداری خودرو."
+    description: {
+  fa: "مجموعه‌ای کاربردی برای تعمیرات و نگهداری خودرو.",
+  en: "A practical tool kit for vehicle repairs and maintenance."
+},
   },
   {
     id: 7,
-    name: "شارژر فندکی خودرو",
-    category: "تجهیزات الکترونیکی",
+    name: { fa: "شارژر فندکی خودرو", en: "Car Charger" },
+category: { fa: "تجهیزات الکترونیکی", en: "Electronic Equipment" },
     price: 490000,
     rating: 4.5,
     tag: "محبوب",
     image: "images/car-charger.jpg",
-    description: "شارژ سریع و آسان دستگاه‌های دیجیتال در خودرو."
+   description: {
+  fa: "شارژ سریع و آسان دستگاه‌های دیجیتال در خودرو.",
+  en: "Fast and convenient charging for your digital devices on the go."
+},
   },
   {
     id: 8,
-    name: "کیت ایمنی خودرو",
-    category: "ایمنی خودرو",
+  name: { fa: "کیت ایمنی خودرو", en: "Car Safety Kit" },
+category: { fa: "ایمنی خودرو", en: "Car Safety" },
     price: 760000,
     rating: 4.8,
     tag: "ضروری",
     image: "images/car-safety-kit.jpg",
-    description: "تجهیزات ضروری برای افزایش ایمنی در سفر."
+    description: {
+  fa: "تجهیزات ضروری برای افزایش ایمنی در سفر.",
+  en: "Essential equipment to improve safety on every journey."
+},
   }
 ];
 
