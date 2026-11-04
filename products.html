@@ -105,6 +105,9 @@ document.querySelectorAll("[data-fa-placeholder][data-en-placeholder]").forEach(
 
   document.getElementById("languageToggle").textContent =
     currentLanguage === "fa" ? "EN" : "FA";
+  if (typeof filterProducts === "function") {
+  filterProducts();
+}
 }
 </script>
   <script src="products.js"></script>
