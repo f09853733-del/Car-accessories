@@ -89,10 +89,10 @@ offersGrid.innerHTML = offers.map(product => `
     <div class="offer-info">
    <h3 data-fa="${product.name.fa}" data-en="${product.name.en}">${product.name.fa}</h3>
 
-      <div class="offer-prices">
-        <span class="old-price">${product.oldPrice}</span>
-        <span class="new-price">${product.newPrice}</span>
-      </div>
+     <div class="offer-prices">
+  <span class="old-price">${product.oldPrice[currentLanguage]}</span>
+  <span class="new-price">${product.newPrice[currentLanguage]}</span>
+</div>
 
       <a href="product-details.html?id=${product.productId}"
          class="offer-button">
