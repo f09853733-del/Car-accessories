@@ -9,6 +9,7 @@ const offers = [
     image: "images/sport-rim.jpg",
     oldPrice: "۱۰,۰۰۰,۰۰۰ تومان",
     newPrice: "۸,۵۰۰,۰۰۰ تومان",
+    discount: "۱۵٪ تخفیف",
     discountEn: "15% OFF",
     productId: 1
   },
@@ -20,6 +21,7 @@ const offers = [
     image: "images/premium-engine-oil.jpg",
     oldPrice: "۱,۶۰۰,۰۰۰ تومان",
     newPrice: "۱,۲۵۰,۰۰۰ تومان",
+    discount: "۲۲٪ تخفیف",
    discountEn: "22% OFF",
     productId: 2
   },
@@ -32,6 +34,7 @@ const offers = [
     oldPrice: "۴,۰۰۰,۰۰۰ تومان",
     newPrice: "۳,۲۰۰,۰۰۰ تومان",
     discount: "۲۰٪ تخفیف",
+    discountEn: "20% OFF",
     productId: 3
   },
   {
@@ -42,6 +45,7 @@ const offers = [
     image: "images/led-car-lights.jpg",
     oldPrice: "۱,۲۰۰,۰۰۰ تومان",
     newPrice: "۹۸۰,۰۰۰ تومان",
+    discount: "۱۸٪ تخفیف",
     discountEn: "18% OFF",
     productId: 4
   }
