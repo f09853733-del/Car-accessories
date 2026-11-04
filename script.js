@@ -12,6 +12,7 @@ window.addEventListener("load", function () {
   }, 3000);
 });
 let currentLanguage = "fa";
+
 const products = [
   {
     id: 1,
@@ -100,8 +101,86 @@ const products = [
     icon: "🧰",
     image: "images/car-safety-kit.jpg",
     description: "تجهیزات کاربردی برای آمادگی در سفر"
+  },
+  {
+    id: 9,
+    name: "ضبط پایونیر",
+    category: "تجهیزات الکترونیکی",
+    price: 0,
+    rating: 4.9,
+    tag: "ویژه",
+    icon: "🎵",
+    image: "images/pioneer-stereo.jpg",
+    description: "ضبط حرفه‌ای پایونیر با امکانات صوتی پیشرفته"
+  },
+  {
+    id: 10,
+    name: "منبع اگزوز رنجروری",
+    category: "قطعات خودرو",
+    price: 0,
+    rating: 4.8,
+    tag: "جدید",
+    icon: "🚗",
+    image: "images/range-rover-exhaust.jpg",
+    description: "منبع اگزوز با طراحی حرفه‌ای"
+  },
+  {
+    id: 11,
+    name: "ساب ووفر خودرو",
+    category: "سیستم صوتی",
+    price: 0,
+    rating: 4.9,
+    tag: "پرفروش",
+    icon: "🔊",
+    image: "images/subwoofer.jpg",
+    description: "بیس قدرتمند و صدای عمیق برای خودرو"
+  },
+  {
+    id: 12,
+    name: "سیستم صوتی خودرو",
+    category: "سیستم صوتی",
+    price: 0,
+    rating: 4.8,
+    tag: "محبوب",
+    icon: "🎶",
+    image: "images/car-audio-system.jpg",
+    description: "مجموعه تجهیزات صوتی خودرو"
+  },
+  {
+    id: 13,
+    name: "کیت مکش هوا",
+    category: "قطعات خودرو",
+    price: 0,
+    rating: 4.7,
+    tag: "ویژه",
+    icon: "⚙️",
+    image: "images/air-intake.jpg",
+    description: "سیستم مکش هوای اسپرت خودرو"
+  },
+  {
+    id: 14,
+    name: "هدرز خودرو",
+    category: "قطعات خودرو",
+    price: 0,
+    rating: 4.8,
+    tag: "جدید",
+    icon: "🔩",
+    image: "images/car-headers.jpg",
+    description: "هدرز فلزی با طراحی اسپرت"
+  },
+  {
+    id: 15,
+    name: "ابزار پنوماتیک",
+    category: "ابزار خودرو",
+    price: 0,
+    rating: 4.7,
+    tag: "کاربردی",
+    icon: "🛠️",
+    image: "images/pneumatic-tools.jpg",
+    description: "ابزار بادی مناسب تعمیرات خودرو"
   }
 ];
+
 
 const productTranslations = {
   1: {
