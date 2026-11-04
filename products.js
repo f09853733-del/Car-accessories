@@ -130,41 +130,43 @@ function renderProducts(list) {
   list.forEach(product => {
     const card = document.createElement("article");
     card.className = "shop-card";
+card.innerHTML = `
+  <div class="shop-card-image">
+    <img src="${product.image}"
+         alt="${product.name[currentLanguage]}"
+         onerror="this.style.display='none'">
+    <span class="shop-card-tag">${product.tag}</span>
+  </div>
 
-    card.innerHTML = `
-      <div class="shop-card-image">
-        <img src="${product.image}" alt="${product.name}"
-             onerror="this.style.display='none'">
-        <span class="shop-card-tag">${product.tag}</span>
-      </div>
+  <div class="shop-card-info">
+    <span class="shop-card-category">
+      ${product.category[currentLanguage]}
+    </span>
 
-      <div class="shop-card-info">
-        <span class="shop-card-category">${product.category}</span>
-        <h3>${product.name}</h3>
+    <h3>${product.name[currentLanguage]}</h3>
 
-        <p class="shop-card-description">
-          ${product.description}
-        </p>
+    <p class="shop-card-description">
+      ${product.description[currentLanguage]}
+    </p>
 
-        <div class="shop-card-rating">
-          ⭐ ${product.rating}
-        </div>
+    <div class="shop-card-rating">
+      ⭐ ${product.rating}
+    </div>
 
-        <div class="shop-card-bottom">
-          <span class="shop-card-price">
-            ${formatPrice(product.price)}
-          </span>
+    <div class="shop-card-bottom">
+      <span class="shop-card-price">
+        ${formatPrice(product.price)}
+      </span>
 
-  <button
-  class="shop-add-cart"
-  type="button"
-  onclick="window.location.href='product-details.html?id=${product.id}'">
-  مشاهده محصول
-</button>
-        </div>
-      </div>
-    `;
-
+      <button
+        class="shop-add-cart"
+        type="button"
+        onclick="window.location.href='product-details.html?id=${product.id}'">
+        ${currentLanguage === "fa" ? "مشاهده محصول" : "View Product"}
+      </button>
+    </div>
+  </div>
+`;
     productsGrid.appendChild(card);
   });
 }
