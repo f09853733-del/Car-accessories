@@ -182,6 +182,7 @@ const products = [
 ];
 
 
+
 const productTranslations = {
   1: {
     name: "Sport Car Rims",
@@ -230,8 +231,51 @@ const productTranslations = {
     category: "Car Safety",
     tag: "Essential",
     description: "Essential equipment for safer trips"
+  },
+  9: {
+    name: "Pioneer Car Stereo",
+    category: "Electronics",
+    tag: "Featured",
+    description: "Professional Pioneer stereo with advanced audio features"
+  },
+  10: {
+    name: "Range Rover Exhaust",
+    category: "Car Parts",
+    tag: "New",
+    description: "Professional exhaust system"
+  },
+  11: {
+    name: "Car Subwoofer",
+    category: "Audio System",
+    tag: "Bestseller",
+    description: "Powerful bass and deep sound for your car"
+  },
+  12: {
+    name: "Car Audio System",
+    category: "Audio System",
+    tag: "Popular",
+    description: "Complete car audio equipment"
+  },
+  13: {
+    name: "Cold Air Intake Kit",
+    category: "Car Parts",
+    tag: "Featured",
+    description: "Sport air intake system for your vehicle"
+  },
+  14: {
+    name: "Car Headers",
+    category: "Car Parts",
+    tag: "New",
+    description: "Sport exhaust headers"
+  },
+  15: {
+    name: "Pneumatic Tools",
+    category: "Car Tools",
+    tag: "Practical",
+    description: "Air-powered tools for automotive repairs"
   }
 };
+
 
 
 
