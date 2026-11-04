@@ -5,7 +5,10 @@ const products = [
     category: { fa: "لوازم جانبی", en: "Accessories" },
     price: 8500000,
     rating: 4.9,
-    tag: "پرفروش",
+    tag: {
+  fa: "پرفروش",
+  en: "Best Seller"
+},
     image: "images/sport-rim.jpg",
 description: {
   fa: "طراحی اسپرت و کیفیت ساخت بالا برای خودروی شما.",
@@ -18,7 +21,10 @@ description: {
     category: { fa: "روغن و نگهداری", en: "Oil & Maintenance" },
     price: 1250000,
     rating: 4.8,
-    tag: "محبوب",
+    tag: {
+  fa: "محبوب",
+  en: "Popular"
+},
     image: "images/premium-engine-oil.jpg",
  description: {
   fa: "محافظت بهتر از موتور و افزایش عملکرد خودرو.",
@@ -31,7 +37,10 @@ description: {
     category: { fa: "تجهیزات الکترونیکی", en: "Electronic Equipment" },
     price: 3200000,
     rating: 4.7,
-    tag: "ویژه",
+    tag: {
+  fa: "ویژه",
+  en: "Featured"
+},
     image: "images/dash-camera.jpg",
    description: {
   fa: "ثبت تصاویر مسیر با کیفیت بالا و جزئیات دقیق.",
@@ -44,7 +53,10 @@ description: {
 category: { fa: "روشنایی خودرو", en: "Car Lighting" },
     price: 980000,
     rating: 4.8,
-    tag: "پیشنهادی",
+    tag: {
+  fa: "پیشنهادی",
+  en: "Recommended"
+},
     image: "images/led-car-lights.jpg",
     description: {
   fa: "نور قدرتمند و روشنایی بهتر در رانندگی شبانه.",
@@ -57,7 +69,10 @@ category: { fa: "روشنایی خودرو", en: "Car Lighting" },
 category: { fa: "لوازم جانبی", en: "Accessories" },
     price: 1450000,
     rating: 4.6,
-    tag: "جدید",
+   tag: {
+  fa: "جدید",
+  en: "New"
+},
     image: "images/car-floor-mats.jpg",
   description: {
   fa: "محافظت از کف خودرو با طراحی زیبا و کاربردی.",
@@ -70,7 +85,10 @@ category: { fa: "لوازم جانبی", en: "Accessories" },
 category: { fa: "قطعات یدکی", en: "Spare Parts" },
     price: 2100000,
     rating: 4.7,
-    tag: "کاربردی",
+    tag: {
+  fa: "کاربردی",
+  en: "Practical"
+},
     image: "images/car-tool-kit.jpg",
     description: {
   fa: "مجموعه‌ای کاربردی برای تعمیرات و نگهداری خودرو.",
@@ -83,7 +101,10 @@ category: { fa: "قطعات یدکی", en: "Spare Parts" },
 category: { fa: "تجهیزات الکترونیکی", en: "Electronic Equipment" },
     price: 490000,
     rating: 4.5,
-    tag: "محبوب",
+    tag: {
+  fa: "محبوب",
+  en: "Popular"
+},
     image: "images/car-charger.jpg",
    description: {
   fa: "شارژ سریع و آسان دستگاه‌های دیجیتال در خودرو.",
@@ -96,7 +117,10 @@ category: { fa: "تجهیزات الکترونیکی", en: "Electronic Equipment
 category: { fa: "ایمنی خودرو", en: "Car Safety" },
     price: 760000,
     rating: 4.8,
-    tag: "ضروری",
+   tag: {
+  fa: "ضروری",
+  en: "Essential"
+},
     image: "images/car-safety-kit.jpg",
     description: {
   fa: "تجهیزات ضروری برای افزایش ایمنی در سفر.",
@@ -135,7 +159,7 @@ card.innerHTML = `
     <img src="${product.image}"
          alt="${product.name[currentLanguage]}"
          onerror="this.style.display='none'">
-    <span class="shop-card-tag">${product.tag}</span>
+    <span class="shop-card-tag">${product.tag[currentLanguage]}</span>
   </div>
 
   <div class="shop-card-info">
@@ -184,8 +208,10 @@ const filteredProducts = products.filter(product => {
   product.category.fa === activeCategory;
 
     const matchesSearch =
-      product.name.toLowerCase().includes(searchValue) ||
-      product.category.toLowerCase().includes(searchValue);
+  product.name.fa.toLowerCase().includes(searchValue) ||
+  product.name.en.toLowerCase().includes(searchValue) ||
+  product.category.fa.toLowerCase().includes(searchValue) ||
+  product.category.en.toLowerCase().includes(searchValue);
 
     return matchesCategory && matchesSearch;
   });
