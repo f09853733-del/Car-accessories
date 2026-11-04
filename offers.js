@@ -7,8 +7,14 @@ const offers = [
     en: "Sport Car Rim"
     },
     image: "images/sport-rim.jpg",
-    oldPrice: "۱۰,۰۰۰,۰۰۰ تومان",
-    newPrice: "۸,۵۰۰,۰۰۰ تومان",
+  oldPrice: {
+  fa: "۱۰,۰۰۰,۰۰۰ تومان",
+  en: "$36.85"
+},
+newPrice: {
+  fa: "۸,۵۰۰,۰۰۰ تومان",
+  en: "$31.32"
+},
     discount: "۱۵٪ تخفیف",
     discountEn: "15% OFF",
     productId: 1
@@ -19,8 +25,14 @@ const offers = [
   en: "Premium Engine Oil"
   },
     image: "images/premium-engine-oil.jpg",
-    oldPrice: "۱,۶۰۰,۰۰۰ تومان",
-    newPrice: "۱,۲۵۰,۰۰۰ تومان",
+oldPrice: {
+  fa: "۱,۶۰۰,۰۰۰ تومان",
+  en: "$5.90"
+},
+newPrice: {
+  fa: "۱,۲۵۰,۰۰۰ تومان",
+  en: "$4.61"
+},
     discount: "۲۲٪ تخفیف",
    discountEn: "22% OFF",
     productId: 2
@@ -31,8 +43,14 @@ const offers = [
   en: "Dash Camera"
   },
     image: "images/dash-camera.jpg",
-    oldPrice: "۴,۰۰۰,۰۰۰ تومان",
-    newPrice: "۳,۲۰۰,۰۰۰ تومان",
+    oldPrice: {
+  fa: "۴,۰۰۰,۰۰۰ تومان",
+  en: "$14.74"
+},
+newPrice: {
+  fa: "۳,۲۰۰,۰۰۰ تومان",
+  en: "$11.79"
+},
     discount: "۲۰٪ تخفیف",
     discountEn: "20% OFF",
     productId: 3
@@ -43,8 +61,14 @@ const offers = [
   en: "LED Car Lights"
   },
     image: "images/led-car-lights.jpg",
-    oldPrice: "۱,۲۰۰,۰۰۰ تومان",
-    newPrice: "۹۸۰,۰۰۰ تومان",
+  oldPrice: {
+  fa: "۱,۲۰۰,۰۰۰ تومان",
+  en: "$4.42"
+},
+newPrice: {
+  fa: "۹۸۰,۰۰۰ تومان",
+  en: "$3.61"
+},
     discount: "۱۸٪ تخفیف",
     discountEn: "18% OFF",
     productId: 4
