@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>محصولات | AUTO LUXE</title>
+  <title data-fa="محصولات | AUTO LUXE" data-en="Products | AUTO LUXE">محصولات | AUTO LUXE</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="products.css">
   <style>
@@ -26,8 +26,14 @@
   </div>
 </header>
    <section class="products-hero">
-  <h1>فروشگاه <span>محصولات</span></h1>
-  <p>تجهیزات و لوازم تخصصی خودرو را در AUTO LUXE پیدا کنید.</p>
+<h1>
+  <span data-fa="فروشگاه " data-en="AUTO LUXE ">فروشگاه </span>
+  <span data-fa="محصولات" data-en="Products">محصولات</span>
+</h1>
+  <p data-fa="تجهیزات و لوازم تخصصی خودرو را در AUTO LUXE پیدا کنید."
+   data-en="Find professional automotive equipment and accessories at AUTO LUXE.">
+  تجهیزات و لوازم تخصصی خودرو را در AUTO LUXE پیدا کنید.
+</p>
 </section>
     
   <section class="products-toolbar">
@@ -36,17 +42,24 @@
     type="text"
     class="products-search"
     id="productSearch"
-    placeholder="جست‌وجوی محصولات..."
+   placeholder="جست‌وجوی محصولات..." data-fa-placeholder="جست‌وجوی محصولات..." data-en-placeholder="Search products..."
   >
 
   <div class="products-filters">
-    <button class="products-filter active" data-category="all">همه محصولات</button>
-    <button class="products-filter" data-category="لوازم جانبی">لوازم جانبی</button>
-    <button class="products-filter" data-category="روغن و نگهداری">روغن و نگهداری</button>
-    <button class="products-filter" data-category="تجهیزات الکترونیکی">تجهیزات الکترونیکی</button>
-    <button class="products-filter" data-category="روشنایی خودرو">روشنایی خودرو</button>
-    <button class="products-filter" data-category="قطعات یدکی">قطعات یدکی</button>
-    <button class="products-filter" data-category="ایمنی خودرو">ایمنی خودرو</button>
+  <button class="products-filter active" data-category="all"
+        data-fa="همه محصولات" data-en="All Products">همه محصولات</button>
+   <button class="products-filter" data-category="لوازم جانبی"
+        data-fa="لوازم جانبی" data-en="Accessories">لوازم جانبی</button>
+    <button class="products-filter" data-category="روغن و نگهداری"
+        data-fa="روغن و نگهداری" data-en="Oil & Maintenance">روغن و نگهداری</button>
+   <button class="products-filter" data-category="تجهیزات الکترونیکی"
+        data-fa="تجهیزات الکترونیکی" data-en="Electronic Equipment">تجهیزات الکترونیکی</button>
+    <button class="products-filter" data-category="روشنایی خودرو"
+        data-fa="روشنایی خودرو" data-en="Car Lighting">روشنایی خودرو</button>
+    <button class="products-filter" data-category="قطعات یدکی"
+        data-fa="قطعات یدکی" data-en="Spare Parts">قطعات یدکی</button>
+   <button class="products-filter" data-category="ایمنی خودرو"
+        data-fa="ایمنی خودرو" data-en="Car Safety">ایمنی خودرو</button>
   </div>
 
 </section>
@@ -54,12 +67,18 @@
 <section class="products-grid" id="productsGrid">
 </section>
 
-<div class="products-empty" id="productsEmpty">
+<div class="products-empty" id="productsEmpty"
+     data-fa="محصولی پیدا نشد."
+     data-en="No products found.">
   محصولی پیدا نشد.
 </div>
-
+    
 <footer class="products-footer">
+  <footer class="products-footer"
+        data-fa="© 2026 AUTO LUXE - تمامی حقوق محفوظ است."
+        data-en="© 2026 AUTO LUXE - All Rights Reserved.">
   © 2026 AUTO LUXE - تمامی حقوق محفوظ است.
+</footer>
 </footer>
 
   </main>
@@ -73,10 +92,16 @@ function toggleLanguage() {
   document.documentElement.dir = currentLanguage === "fa" ? "rtl" : "ltr";
 
   document.querySelectorAll("[data-fa][data-en]").forEach((element) => {
-    element.textContent = element.getAttribute(
-      currentLanguage === "fa" ? "data-fa" : "data-en"
-    );
-  });
+  element.textContent = element.getAttribute(
+    currentLanguage === "fa" ? "data-fa" : "data-en"
+  );
+});
+
+document.querySelectorAll("[data-fa-placeholder][data-en-placeholder]").forEach((element) => {
+  element.placeholder = element.getAttribute(
+    currentLanguage === "fa" ? "data-fa-placeholder" : "data-en-placeholder"
+  );
+});
 
   document.getElementById("languageToggle").textContent =
     currentLanguage === "fa" ? "EN" : "FA";
