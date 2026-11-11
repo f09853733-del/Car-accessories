@@ -41,12 +41,23 @@
 
 .contact-header-actions {
   display: flex;
+  align-items: center;
   gap: 12px;
 }
 
-.contact-header a,
-.contact-header button {
-  .contact-header .language-btn {
+.contact-header a {
+  color: white;
+  text-decoration: none;
+  background: transparent;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-family: inherit;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.contact-header .language-btn {
   width: 44px;
   height: 44px;
   padding: 0;
@@ -66,8 +77,12 @@
 
 .contact-header .language-btn:hover {
   background: #b80019;
-  border-color: #b80019;
   transform: translateY(-2px);
+}
+
+.contact-header a:hover {
+  border-color: #e00020;
+  color: #e00020;
 }
   color: white;
   text-decoration: none;
