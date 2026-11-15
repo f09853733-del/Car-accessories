@@ -510,6 +510,40 @@
 <script src="script.js"></script>
 
 <script>
+let contactLanguage = document.documentElement.lang || "fa";
+
+function toggleLanguage() {
+  contactLanguage = contactLanguage === "fa" ? "en" : "fa";
+
+  document.documentElement.lang = contactLanguage;
+  document.documentElement.dir =
+    contactLanguage === "fa" ? "rtl" : "ltr";
+
+  document.querySelectorAll("[data-fa][data-en]").forEach((element) => {
+    element.textContent = element.getAttribute(
+      contactLanguage === "fa" ? "data-fa" : "data-en"
+    );
+  });
+
+  document.querySelectorAll(
+    "[data-fa-placeholder][data-en-placeholder]"
+  ).forEach((element) => {
+    element.placeholder = element.getAttribute(
+      contactLanguage === "fa"
+        ? "data-fa-placeholder"
+        : "data-en-placeholder"
+    );
+  });
+
+  const button = document.getElementById("languageToggle");
+
+  if (button) {
+    button.textContent = contactLanguage === "fa" ? "EN" : "FA";
+  }
+}
+
+window.toggleLanguage = toggleLanguage;
+
 document.getElementById("contactForm").addEventListener("submit", function(event) {
   event.preventDefault();
 
@@ -520,6 +554,5 @@ document.getElementById("contactForm").addEventListener("submit", function(event
   );
 });
 </script>
-
 </body>
 </html>
