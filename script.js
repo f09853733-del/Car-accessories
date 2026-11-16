@@ -353,7 +353,7 @@ function renderProducts() {
     card.innerHTML = `
       <div class="product-image">
         <div class="product-placeholder" aria-hidden="true">${product.icon}</div>
-        <img src="${product.image}" alt="${name}" loading="lazy">
+        <img src="${product.image}" alt="${name}">
         <span class="product-tag">${tag}</span>
       </div>
       <div class="product-info">
