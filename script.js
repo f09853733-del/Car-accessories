@@ -375,11 +375,10 @@ function renderProducts() {
       placeholder.style.display = "none";
     });
 
-    img.addEventListener("error", () => {
-      img.style.display = "none";
-      placeholder.style.display = "grid";
-    });
-
+  img.addEventListener("error", () => {
+  img.style.display = "none";
+  placeholder.style.display = "grid";
+});
     productGrid.appendChild(card);
   });
 }
