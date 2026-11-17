@@ -265,10 +265,28 @@
   </div>
 </section>
 
-    <footer class="about-footer">
-      © 2026 AUTO LUXE - تمامی حقوق محفوظ است.
-    </footer>
-
+   <footer class="about-footer"
+  data-fa="© 2026 AUTO LUXE - تمامی حقوق محفوظ است."
+  data-en="© 2026 AUTO LUXE - All rights reserved.">
+  © 2026 AUTO LUXE - تمامی حقوق محفوظ است.
+</footer>
   </main>
 </body>
+  <script>
+  let currentLanguage = "fa";
+
+  function toggleLanguage() {
+    currentLanguage = currentLanguage === "fa" ? "en" : "fa";
+
+    document.documentElement.lang = currentLanguage;
+    document.documentElement.dir = currentLanguage === "fa" ? "rtl" : "ltr";
+
+    document.querySelectorAll("[data-fa][data-en]").forEach(element => {
+      element.textContent = element.getAttribute(`data-${currentLanguage}`);
+    });
+
+    const languageButton = document.getElementById("languageToggle");
+    languageButton.textContent = currentLanguage === "fa" ? "EN" : "FA";
+  }
+</script>
 </html>
