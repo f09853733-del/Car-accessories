@@ -371,9 +371,15 @@ function renderProducts() {
     const img = card.querySelector("img");
     const placeholder = card.querySelector(".product-placeholder");
 
-    img.addEventListener("load", () => {
-      placeholder.style.display = "none";
-    });
+    function hidePlaceholder() {
+  placeholder.style.display = "none";
+}
+
+if (img.complete && img.naturalWidth > 0) {
+  hidePlaceholder();
+} else {
+  img.addEventListener("load", hidePlaceholder);
+}
 
   img.addEventListener("error", () => {
   img.style.display = "none";
