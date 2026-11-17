@@ -267,3 +267,17 @@
     height: 220px;
   }
 }
+.products-header .about-back {
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid #e63946;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: .3s;
+}
+
+.products-header .about-back:hover {
+  background: #e63946;
+  border-color: #e63946;
+  color: #fff;
+}
