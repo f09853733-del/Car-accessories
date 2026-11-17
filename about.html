@@ -162,9 +162,20 @@
   <main class="about-page">
 
     <header class="about-header">
-      <div class="about-logo">AUTO <span>LUXE</span></div>
-      <a href="index.html" class="about-back">بازگشت به صفحه اصلی</a>
-    </header>
+  <div class="about-logo">AUTO <span>LUXE</span></div>
+
+  <div style="display:flex; gap:10px; align-items:center;">
+    <button id="languageToggle" class="about-back" onclick="toggleLanguage()">
+      EN
+    </button>
+
+    <a href="index.html" class="about-back"
+       data-fa="بازگشت به صفحه اصلی"
+       data-en="Back to Home">
+      بازگشت به صفحه اصلی
+    </a>
+  </div>
+</header>
 
     <section class="about-hero">
       <h1>درباره <span>AUTO LUXE</span></h1>
