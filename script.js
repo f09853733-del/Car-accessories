@@ -293,10 +293,13 @@ let searchTerm = "";
 let cart = [];
 let toastTimeout;
 
-function formatPrice(price, priceUSD) {
+function formatPrice(price) {
   if (currentLanguage === "en") {
-    return "$" + new Intl.NumberFormat("en-US").format(priceUSD);
+    return new Intl.NumberFormat("en-US").format(price) + " Toman";
   }
+
+  return new Intl.NumberFormat("fa-IR").format(price) + " تومان";
+}
 
   return new Intl.NumberFormat("fa-IR").format(price) + " تومان";
 }
