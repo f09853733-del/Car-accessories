@@ -106,7 +106,7 @@ const products = [
     id: 9,
     name: "ضبط پایونیر",
     category: "تجهیزات الکترونیکی",
-    price: 0,
+    price: 4500000,
     rating: 4.9,
     tag: "ویژه",
     icon: "🎵",
@@ -117,7 +117,7 @@ const products = [
     id: 10,
     name: "منبع اگزوز رنجروری",
     category: "قطعات خودرو",
-    price: 0,
+    price: 3800000,
     rating: 4.8,
     tag: "جدید",
     icon: "🚗",
@@ -128,7 +128,7 @@ const products = [
     id: 11,
     name: "ساب ووفر خودرو",
     category: "سیستم صوتی",
-    price: 0,
+    price: 5200000,
     rating: 4.9,
     tag: "پرفروش",
     icon: "🔊",
@@ -139,7 +139,7 @@ const products = [
     id: 12,
     name: "سیستم صوتی خودرو",
     category: "سیستم صوتی",
-    price: 0,
+    price: 8500000,
     rating: 4.8,
     tag: "محبوب",
     icon: "🎶",
@@ -150,7 +150,7 @@ const products = [
     id: 13,
     name: "کیت مکش هوا",
     category: "قطعات خودرو",
-    price: 0,
+    price: 2900000,
     rating: 4.7,
     tag: "ویژه",
     icon: "⚙️",
@@ -161,7 +161,7 @@ const products = [
     id: 14,
     name: "هدرز خودرو",
     category: "قطعات خودرو",
-    price: 0,
+    price: 4800000,
     rating: 4.8,
     tag: "جدید",
     icon: "🔩",
@@ -172,7 +172,7 @@ const products = [
     id: 15,
     name: "ابزار پنوماتیک",
     category: "ابزار خودرو",
-    price: 0,
+    price: 6500000,
     rating: 4.7,
     tag: "کاربردی",
     icon: "🛠️",
@@ -293,10 +293,13 @@ let searchTerm = "";
 let cart = [];
 let toastTimeout;
 
-function formatPrice(price) {
+function formatPrice(price, priceUSD) {
   if (currentLanguage === "en") {
-    return new Intl.NumberFormat("en-US").format(price) + " Toman";
+    return "$" + new Intl.NumberFormat("en-US").format(priceUSD);
   }
+
+  return new Intl.NumberFormat("fa-IR").format(price) + " تومان";
+}
 
   return new Intl.NumberFormat("fa-IR").format(price) + " تومان";
 }
