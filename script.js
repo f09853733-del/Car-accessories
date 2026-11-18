@@ -301,12 +301,6 @@ function formatPrice(price) {
   return new Intl.NumberFormat("fa-IR").format(price) + " تومان";
 }
 
-  return new Intl.NumberFormat("fa-IR").format(price) + " تومان";
-}
-
-  return new Intl.NumberFormat("fa-IR").format(price) + " تومان";
-}
-
 function showToast(message) {
   toast.textContent = message;
   toast.classList.add("show");
